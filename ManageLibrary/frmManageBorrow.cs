@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ManageLibrary
 {
-    public partial class frmManageLibraryBook : Form
+    public partial class frmManageBorrow : Form
     {
-        public frmManageLibraryBook()
+        public frmManageBorrow()
         {
             InitializeComponent();
         }

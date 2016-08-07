@@ -52,17 +52,35 @@
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCheckBorrow.cs">
+    <Compile Include="frmManageBorrow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCheckBorrow.Designer.cs">
-      <DependentUpon>frmCheckBorrow.cs</DependentUpon>
+    <Compile Include="frmManageBorrow.Designer.cs">
+      <DependentUpon>frmManageBorrow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageLibraryBook.cs">
+    <Compile Include="frmManageAuthor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageLibraryBook.Designer.cs">
-      <DependentUpon>frmManageLibraryBook.cs</DependentUpon>
+    <Compile Include="frmManageAuthor.Designer.cs">
+      <DependentUpon>frmManageAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageBorrowers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageBorrowers.Designer.cs">
+      <DependentUpon>frmManageBorrowers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateBook.Designer.cs">
+      <DependentUpon>frmUpdateBook.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -82,12 +100,6 @@
     <Compile Include="frmUserManageBook.Designer.cs">
       <DependentUpon>frmUserManageBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUserSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUserSearch.Designer.cs">
-      <DependentUpon>frmUserSearch.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmUser.cs">
@@ -99,23 +111,29 @@
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCheckBorrow.resx">
-      <DependentUpon>frmCheckBorrow.cs</DependentUpon>
+    <EmbeddedResource Include="frmManageBorrow.resx">
+      <DependentUpon>frmManageBorrow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageLibraryBook.resx">
-      <DependentUpon>frmManageLibraryBook.cs</DependentUpon>
+    <EmbeddedResource Include="frmManageAuthor.resx">
+      <DependentUpon>frmManageAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageBorrowers.resx">
+      <DependentUpon>frmManageBorrowers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateBook.resx">
+      <DependentUpon>frmUpdateBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewBook.resx">
       <DependentUpon>frmNewBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserManageBook.resx">
       <DependentUpon>frmUserManageBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUserSearch.resx">
-      <DependentUpon>frmUserSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

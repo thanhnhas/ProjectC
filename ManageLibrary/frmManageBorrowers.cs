@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace ManageLibrary
 {
-    public partial class frmUserSearch : Form
+    public partial class frmManageBorrowers : Form
     {
-        public frmUserSearch()
+        public frmManageBorrowers()
         {
             InitializeComponent();
         }
+
+        
     }
 }
