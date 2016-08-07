@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace ManageLibrary
 {
-    public partial class frmManageBorrow : Form
+    public partial class frm_UpdateBook : Form
     {
-        public frmManageBorrow()
+        public frm_UpdateBook()
         {
             InitializeComponent();
         }
+
+        
     }
 }
