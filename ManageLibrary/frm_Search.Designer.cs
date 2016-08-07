@@ -1,6 +1,6 @@
 ﻿namespace ManageLibrary
 {
-    partial class frmSearch
+    partial class frm_Search
     {
         /// <summary>
         /// Required designer variable.
