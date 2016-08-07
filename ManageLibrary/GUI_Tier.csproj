@@ -52,11 +52,11 @@
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageBorrow.cs">
+    <Compile Include="frm_ManageBorrow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageBorrow.Designer.cs">
-      <DependentUpon>frmManageBorrow.cs</DependentUpon>
+    <Compile Include="frm_ManageBorrow.Designer.cs">
+      <DependentUpon>frm_ManageBorrow.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManageAuthor.cs">
       <SubType>Form</SubType>
@@ -111,8 +111,8 @@
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageBorrow.resx">
-      <DependentUpon>frmManageBorrow.cs</DependentUpon>
+    <EmbeddedResource Include="frm_ManageBorrow.resx">
+      <DependentUpon>frm_ManageBorrow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
