@@ -9,7 +9,7 @@ namespace ManageLibrary
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.ssss
+        /// The main entry point for the application.ss
         /// </summary>
         [STAThread]
         static void Main()
