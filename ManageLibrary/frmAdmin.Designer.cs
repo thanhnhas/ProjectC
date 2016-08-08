@@ -30,21 +30,21 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnManageBorrowers = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -75,15 +75,16 @@
             this.button3.Text = "Quản Lý Mượn Trả";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnManageBorrowers
             // 
-            this.button4.Location = new System.Drawing.Point(858, 137);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(212, 49);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Quản Lý Độc Giả";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnManageBorrowers.Location = new System.Drawing.Point(858, 137);
+            this.btnManageBorrowers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnManageBorrowers.Name = "btnManageBorrowers";
+            this.btnManageBorrowers.Size = new System.Drawing.Size(212, 49);
+            this.btnManageBorrowers.TabIndex = 3;
+            this.btnManageBorrowers.Text = "Quản Lý Tài Khoản";
+            this.btnManageBorrowers.UseVisualStyleBackColor = true;
+            this.btnManageBorrowers.Click += new System.EventHandler(this.btnManageBorrowers_Click);
             // 
             // button2
             // 
@@ -105,6 +106,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Loại Sách";
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(6, 28);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(295, 251);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBox6);
@@ -124,45 +133,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Chi Tiết";
             // 
-            // listView1
+            // textBox6
             // 
-            this.listView1.Location = new System.Drawing.Point(6, 28);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(295, 251);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.textBox6.Location = new System.Drawing.Point(122, 247);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(303, 22);
+            this.textBox6.TabIndex = 9;
             // 
-            // label1
+            // label6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã Sách";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(122, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(303, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(122, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(303, 22);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tên Sách";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(26, 247);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 17);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Tác Giả";
             // 
             // textBox3
             // 
@@ -196,21 +181,37 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Mã loại sách";
             // 
-            // textBox6
+            // textBox2
             // 
-            this.textBox6.Location = new System.Drawing.Point(122, 247);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(303, 22);
-            this.textBox6.TabIndex = 9;
+            this.textBox2.Location = new System.Drawing.Point(122, 78);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(303, 22);
+            this.textBox2.TabIndex = 3;
             // 
-            // label6
+            // label2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 247);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 17);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Tác Giả";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tên Sách";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(122, 28);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(303, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã Sách";
             // 
             // button5
             // 
@@ -262,7 +263,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnManageBorrowers);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -281,7 +282,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnManageBorrowers;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListView listView1;
