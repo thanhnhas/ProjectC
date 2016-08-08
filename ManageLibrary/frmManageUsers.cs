@@ -37,8 +37,6 @@ namespace ManageLibrary
             txtUserPhone.Enabled = flag;
             txtUserCount.Enabled = flag;
             txtUserStatus.Enabled = flag;
-
-
         }
        
         private void frmManageBorrowers_Load(object sender, EventArgs e)
