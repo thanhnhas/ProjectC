@@ -157,9 +157,9 @@
       <Project>{59df5881-6789-4509-887f-1f1c0570d1b7}</Project>
       <Name>Business_Tier</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Data_Tier\Data_Tier.csproj">
+    <ProjectReference Include="..\Data_Tier\DataProvider.csproj">
       <Project>{184d4e4e-799e-4f7c-9429-bb5cfa5c48ec}</Project>
-      <Name>Data_Tier</Name>
+      <Name>DataProvider</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

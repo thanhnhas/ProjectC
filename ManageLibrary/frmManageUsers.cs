@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Data_Tier;
-using Business_Tier;
+using Business_Tier.DataAccess;
+using Business_Tier.Entities;
+
 
 namespace ManageLibrary
 {
@@ -18,7 +20,7 @@ namespace ManageLibrary
         {
             InitializeComponent();
         }
-        DT_User udt = new DT_User();
+        UserData udt = new UserData();
         DataTable dtUser;
         Users u = new Users();
         public void EnableTxT(int t)
@@ -39,29 +41,25 @@ namespace ManageLibrary
        
         private void frmManageBorrowers_Load(object sender, EventArgs e)
         {
-            dtUser = udt.getUser();
+            dtUser = udt.GetUserByDataSet().Tables[0];
+
             dtUser.PrimaryKey = new DataColumn[] { dtUser.Columns["username"] };
             bsUser.DataSource = dtUser;
-            txtUsername.DataBindings.Clear();
-            txtUserPassword.DataBindings.Clear();
-            txtUsertype.DataBindings.Clear();
+            txtUsername.DataBindings.Clear();    
             txtName.DataBindings.Clear();
-            txtUserAddress.DataBindings.Clear();
             txtUserPhone.DataBindings.Clear();
-            txtUserCount.DataBindings.Clear();
+            txtUsertype.DataBindings.Clear();
+            txtUserAddress.DataBindings.Clear();
+            
             txtUserStatus.DataBindings.Clear();
-            
-            
 
-            txtUsername.DataBindings.Add("Text", bsUser, "username");
-            txtUserPassword.DataBindings.Add("Text", bsUser, "password");
-            txtUsertype.DataBindings.Add("Text", bsUser, "type");
-            txtName.DataBindings.Add("Text", bsUser, "name");
-            txtUserAddress.DataBindings.Add("Text", bsUser, "address");
-            txtUserPhone.DataBindings.Add("Text", bsUser, "phone");
-            txtUserCount.DataBindings.Add("Text", bsUser, "count");
-            txtUserStatus.DataBindings.Add("Text", bsUser, "status");
+            txtUsername.DataBindings.Add("Text", bsUser, "Username");
+            txtName.DataBindings.Add("Text", bsUser, "Full Name");
+            txtUserPhone.DataBindings.Add("Text", bsUser, "Phone Number");
+            txtUsertype.DataBindings.Add("Text", bsUser, "Account Type");
+            txtUserAddress.DataBindings.Add("Text", bsUser, "Address");
 
+            txtUserStatus.DataBindings.Add("Text", bsUser, "Status");
 
             dgwUser.DataSource = bsUser;
             bnUser.BindingSource = bsUser;
@@ -94,7 +92,7 @@ namespace ManageLibrary
             u.UserCount = int.Parse(txtUserCount.Text);
             u.UserStatus = int.Parse(txtUserStatus.Text);
             
-            flag=udt.AddUser(u);
+            flag=udt.addNewUser(u);
 
             if (flag == true)
             {
