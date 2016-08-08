@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_Tier", "ManageLibrary\GUI_Tier.csproj", "{155356FF-D83B-4909-B987-09797A96F282}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data_Tier", "Data_Tier\Data_Tier.csproj", "{184D4E4E-799E-4F7C-9429-BB5CFA5C48EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProvider", "Data_Tier\DataProvider.csproj", "{184D4E4E-799E-4F7C-9429-BB5CFA5C48EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business_Tier", "Business_Tier\Business_Tier.csproj", "{59DF5881-6789-4509-887F-1F1C0570D1B7}"
 EndProject

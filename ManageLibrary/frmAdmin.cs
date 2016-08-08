@@ -17,5 +17,11 @@ namespace ManageLibrary
             InitializeComponent();
         }
 
+        private void btnManageBorrowers_Click(object sender, EventArgs e)
+        {
+            frmManageUsers mngUser = new frmManageUsers();
+            DialogResult r = mngUser.ShowDialog();
+
+        }
     }
 }

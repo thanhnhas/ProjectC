@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,17 +65,11 @@
     <Compile Include="frmManageAuthor.Designer.cs">
       <DependentUpon>frmManageAuthor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageBorrowers.cs">
+    <Compile Include="frmManageUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManageBorrowers.Designer.cs">
-      <DependentUpon>frmManageBorrowers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Search.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Search.Designer.cs">
-      <DependentUpon>frm_Search.cs</DependentUpon>
+    <Compile Include="frmManageUsers.Designer.cs">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_UpdateBook.cs">
       <SubType>Form</SubType>
@@ -120,11 +115,8 @@
     <EmbeddedResource Include="frmManageAuthor.resx">
       <DependentUpon>frmManageAuthor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageBorrowers.resx">
-      <DependentUpon>frmManageBorrowers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Search.resx">
-      <DependentUpon>frm_Search.cs</DependentUpon>
+    <EmbeddedResource Include="frmManageUsers.resx">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_UpdateBook.resx">
       <DependentUpon>frm_UpdateBook.cs</DependentUpon>
@@ -159,6 +151,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business_Tier\Business_Tier.csproj">
+      <Project>{59df5881-6789-4509-887f-1f1c0570d1b7}</Project>
+      <Name>Business_Tier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data_Tier\DataProvider.csproj">
+      <Project>{184d4e4e-799e-4f7c-9429-bb5cfa5c48ec}</Project>
+      <Name>DataProvider</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
