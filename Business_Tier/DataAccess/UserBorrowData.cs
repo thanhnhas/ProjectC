@@ -40,11 +40,11 @@ namespace Business_Tier.DataAccess
                 {
                     UserBorrow urb = new UserBorrow();
                     {
-                        username = rd.GetString(0);
-                        fromDate = rd.GetDateTime(1);
-                        toDate = rd.GetDateTime(2);
-                        status = rd.GetBoolean(3);
-                        deadline = rd.GetDateTime(4);
+                        urb.username = rd.GetString(0);
+                        urb.fromDate = rd.GetDateTime(1);
+                        urb.toDate = rd.GetDateTime(2);
+                        urb.status = rd.GetBoolean(3);
+                        urb.deadline = rd.GetDateTime(4);
                     };
                     borrowList.Add(urb);
                 }
