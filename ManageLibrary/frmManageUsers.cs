@@ -20,6 +20,7 @@ namespace ManageLibrary
         {
             InitializeComponent();
         }
+        private bool addOrEdit;
         UserData udt = new UserData();
         DataTable dtUser;
         Users u = new Users();
@@ -49,6 +50,7 @@ namespace ManageLibrary
             txtName.DataBindings.Clear();
             txtUserPhone.DataBindings.Clear();
             txtUsertype.DataBindings.Clear();
+            txtUserCount.DataBindings.Clear();
             txtUserAddress.DataBindings.Clear();
             
             txtUserStatus.DataBindings.Clear();
@@ -58,7 +60,7 @@ namespace ManageLibrary
             txtUserPhone.DataBindings.Add("Text", bsUser, "Phone Number");
             txtUsertype.DataBindings.Add("Text", bsUser, "Account Type");
             txtUserAddress.DataBindings.Add("Text", bsUser, "Address");
-
+            txtUserCount.DataBindings.Add("Text", bsUser, "Count");
             txtUserStatus.DataBindings.Add("Text", bsUser, "Status");
 
             dgwUser.DataSource = bsUser;
@@ -77,6 +79,7 @@ namespace ManageLibrary
             txtUserStatus.Clear();
             this.EnableTxT(0);
             btnUserAdd.Enabled = false;
+            addOrEdit = true;
 
         }
 
@@ -91,8 +94,11 @@ namespace ManageLibrary
             u.UserPhone = txtUserPhone.Text;
             u.UserCount = int.Parse(txtUserCount.Text);
             u.UserStatus = int.Parse(txtUserStatus.Text);
-            
-            flag=udt.addNewUser(u);
+
+            if (addOrEdit == true)
+                flag = udt.addNewUser(u);
+            else
+                flag = udt.updateUser(u);
 
             if (flag == true)
             {
@@ -106,6 +112,41 @@ namespace ManageLibrary
 
         }
 
-        
+        private void btnUserUpdate_Click(object sender, EventArgs e)
+        {
+            txtUserPassword.Clear();
+            txtUsertype.Clear();
+            txtName.Clear();
+            txtUserAddress.Clear();
+            txtUserPhone.Clear();
+            txtUserCount.Clear();
+            txtUserStatus.Clear();
+            this.EnableTxT(0);
+            txtUsername.Enabled = false;
+            btnUserUpdate.Enabled = false;
+            addOrEdit = false;
+        }
+
+        private void btnUserDelete_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            Users b = new Users { UserName = username };
+            if (udt.deleteUser(b))
+            {
+                DataRow row = dtUser.Rows.Find(username);
+                dtUser.Rows.Remove(row);
+                MessageBox.Show("Successful.");
+
+            }
+            else
+            {
+                MessageBox.Show("Fail.");
+            }
+        }
+
+        private void btnUserCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

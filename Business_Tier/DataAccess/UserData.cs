@@ -16,7 +16,7 @@ namespace Business_Tier.DataAccess
         //-----------------------------------------------------------------
         public DataSet GetUserByDataSet()
         {
-            string SQL = "select u.username as 'Username' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',s.name as 'Status' from tblUser u, tblType t,tblStatus s where u.type = t.type and s.statusID=u.status";
+            string SQL = "select u.username as 'Username' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count',s.name as 'Status' from tblUser u, tblType t,tblStatus s where u.type = t.type and s.statusID=u.status";
             DataSet dsUser = new DataSet();
             try
             {
@@ -79,17 +79,22 @@ namespace Business_Tier.DataAccess
             }
         }
         //--------------------------------------------------
-        /*
-        public bool updateBook(Users b)
+        
+        public bool updateUser(Users b)
         {
-            string SQL = "Update Books set BookTitle=@Title,BookQuantity =@Quantity,BookPrice=@Price where BookID=@ID";
-            SqlParameter id = new SqlParameter("@ID", b.BookID);
-            SqlParameter title = new SqlParameter("@Title", b.BookTitle);
-            SqlParameter quantity = new SqlParameter("@Quantity", b.BookQuantity);
-            SqlParameter price = new SqlParameter("@Price", b.BookPrice);
+            //string SQLs = "Update Books set BookTitle=@Title,BookQuantity =@Quantity,BookPrice=@Price where BookID=@ID";
+            string SQL = "Update tblUser set Username=@username,password=@password,type=@type,name=@name,address=@address,phone=@phone,count=@count,status=@status where username=@username";
+            SqlParameter username = new SqlParameter("@username", b.UserName);
+            SqlParameter password = new SqlParameter("@password", b.UserPassword);
+            SqlParameter type = new SqlParameter("@type", b.UserType);
+            SqlParameter name = new SqlParameter("@name", b.Name);
+            SqlParameter address = new SqlParameter("@address", b.UserAddress);
+            SqlParameter phone = new SqlParameter("@phone", b.UserPhone);
+            SqlParameter count = new SqlParameter("@count", b.UserCount);
+            SqlParameter status = new SqlParameter("@status", b.UserStatus);
             try
             {
-                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, id, title, quantity, price);
+                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, username, password, type, name, address, phone, count, status);
             }
             catch (SqlException se)
             {
@@ -97,19 +102,20 @@ namespace Business_Tier.DataAccess
             }
         }
         //--------------------------------------------------
-        public bool deleteBook(Users b)
+        public bool deleteUser(Users b)
         {
-            string SQL = "Delete Books where BookID=@ID";
-            SqlParameter id = new SqlParameter("@ID", b.BookID);
+            string SQL = "Delete tblUser where username=@username";
+            //string SQL = "Delete Books where BookID=@ID";
+            SqlParameter username = new SqlParameter("@username", b.UserName);
             try
             {
-                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, id);
+                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, username);
             }
             catch (SqlException se)
             {
                 throw new Exception(se.Message);
             }
         }
-        */
+        
     }
 }

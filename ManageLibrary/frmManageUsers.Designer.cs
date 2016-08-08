@@ -102,6 +102,7 @@
             this.btnUserCancel.TabIndex = 12;
             this.btnUserCancel.Text = "Thoát";
             this.btnUserCancel.UseVisualStyleBackColor = true;
+            this.btnUserCancel.Click += new System.EventHandler(this.btnUserCancel_Click);
             // 
             // btnUserDelete
             // 
@@ -111,6 +112,7 @@
             this.btnUserDelete.TabIndex = 11;
             this.btnUserDelete.Text = "Xóa";
             this.btnUserDelete.UseVisualStyleBackColor = true;
+            this.btnUserDelete.Click += new System.EventHandler(this.btnUserDelete_Click);
             // 
             // btnUserUpdate
             // 
@@ -118,8 +120,9 @@
             this.btnUserUpdate.Name = "btnUserUpdate";
             this.btnUserUpdate.Size = new System.Drawing.Size(117, 50);
             this.btnUserUpdate.TabIndex = 10;
-            this.btnUserUpdate.Text = "Sữa";
+            this.btnUserUpdate.Text = "Sửa";
             this.btnUserUpdate.UseVisualStyleBackColor = true;
+            this.btnUserUpdate.Click += new System.EventHandler(this.btnUserUpdate_Click);
             // 
             // btnUserSave
             // 
