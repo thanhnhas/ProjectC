@@ -30,9 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnChangeInfo = new System.Windows.Forms.Button();
+            this.btnChangePass = new System.Windows.Forms.Button();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -59,9 +58,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.btnChangeInfo);
+            this.groupBox1.Controls.Add(this.btnChangePass);
             this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtEmail);
@@ -79,35 +77,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin User";
             // 
-            // button6
+            // btnChangeInfo
             // 
-            this.button6.Location = new System.Drawing.Point(104, 191);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(116, 26);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Thay đỗi thông tin";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnChangeInfo.Location = new System.Drawing.Point(104, 191);
+            this.btnChangeInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChangeInfo.Name = "btnChangeInfo";
+            this.btnChangeInfo.Size = new System.Drawing.Size(116, 26);
+            this.btnChangeInfo.TabIndex = 9;
+            this.btnChangeInfo.Text = "Thay đỗi thông tin";
+            this.btnChangeInfo.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnChangePass
             // 
-            this.button5.Location = new System.Drawing.Point(373, 191);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(56, 26);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Logout";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(236, 191);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 26);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Thay đỗi mật khẩu";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnChangePass.Location = new System.Drawing.Point(236, 191);
+            this.btnChangePass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.Size = new System.Drawing.Size(110, 26);
+            this.btnChangePass.TabIndex = 5;
+            this.btnChangePass.Text = "Thay đỗi mật khẩu";
+            this.btnChangePass.UseVisualStyleBackColor = true;
             // 
             // txtAddress
             // 
@@ -233,9 +221,8 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnChangeInfo;
+        private System.Windows.Forms.Button btnChangePass;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEmail;

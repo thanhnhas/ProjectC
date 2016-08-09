@@ -15,6 +15,7 @@ namespace ManageLibrary
     {
         DataTable dt = new DataTable();
         UserLogin ul = new UserLogin();
+        
         public frmLogin()
         {
             InitializeComponent();
@@ -31,12 +32,15 @@ namespace ManageLibrary
             {
                 if (d != 0)
                 {
-                    frmAdmin mngAdmin = new frmAdmin();
-                    DialogResult r = mngAdmin.ShowDialog();
+                    frmAdmin mngAdmin = new frmAdmin(txtUsername.Text);
+                    this.Hide();
+                    mngAdmin.ShowDialog();
+
                 } else
                 {
-                    frmUser mngUser = new frmUser();
-                    DialogResult r = mngUser.ShowDialog();
+                    frmUser mngUser = new frmUser(txtUsername.Text);
+                    this.Hide();
+                    mngUser.ShowDialog();
                 }
             }
             if (c==0)

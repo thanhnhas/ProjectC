@@ -18,19 +18,9 @@ namespace ManageLibrary
         {
             InitializeComponent();
         }
-        private bool check;
-        UserData udt = new UserData();
-        DataTable dtUser;
-        Users urs = new Users();
-        public void EnableTXT(int n)
+        public frmUser(string s)
         {
-            bool flag;
-            if (n == 0) flag = true;
-            else flag = false;
-            txtUsernme.Enabled = flag;
-            txtEmail.Enabled = flag;
-            txtPhone.Enabled = flag;
-            txtAddress.Enabled = flag;
+            InitializeComponent();
         }
     }
 }
