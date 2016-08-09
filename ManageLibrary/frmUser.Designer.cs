@@ -212,6 +212,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUser";
             this.Text = "User";
+            this.Load += new System.EventHandler(this.frmUser_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

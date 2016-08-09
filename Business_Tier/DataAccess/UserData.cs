@@ -29,6 +29,22 @@ namespace Business_Tier.DataAccess
             }
             return dsUser;
         }
+        //--------------------------------------------------------------------
+        public DataSet GetUserByUsername(string username)
+        {
+            string SQL = "select u.username as 'Username' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count',s.name as 'Status' from tblUser u, tblType t,tblStatus s where u.type = t.type and s.statusID=u.status and username='"+username+"'";
+            DataSet dsUser = new DataSet();
+            try
+            {
+                dsUser = DataProvider.ExecuteQueryWithDataSet(SQL, CommandType.Text);
+
+            }
+            catch (SqlException se)
+            {
+                throw new Exception(se.Message);
+            }
+            return dsUser;
+        }
         //-----------------------------------------------------------------
         public List<Users> GetUserByDataReader()
         {
