@@ -21,5 +21,11 @@ namespace ManageLibrary
             InitializeComponent();
             label4.Text = s;
         }
+
+        private void btnManageBorrowers_Click(object sender, EventArgs e)
+        {
+            frmManageUsers mus = new frmManageUsers();
+            mus.ShowDialog();
+        }
     }
 }

@@ -28,11 +28,17 @@ namespace ManageLibrary
             dtUser.PrimaryKey = new DataColumn[] { dtUser.Columns["username"] };
             txtAddress.DataBindings.Add("Text",dtUser ,"Address");
             txtPhone.DataBindings.Add("Text", dtUser, "Phone Number");
-            txtEmail.DataBindings.Add("Text", dtUser, "Email");
+            txtFullName.DataBindings.Add("Text", dtUser, "Full Name");
             txtPhone.Enabled = false;
             txtAddress.Enabled = false;
-            txtEmail.Enabled = false;
+            txtFullName.Enabled = false;
             txtUsernme.Enabled = false;
+        }
+
+        private void btnChangeInfo_Click(object sender, EventArgs e)
+        {
+            frmChangeInfo mngChange = new frmChangeInfo(txtUsernme.Text);
+            mngChange.ShowDialog();
         }
     }
     

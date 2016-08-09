@@ -34,7 +34,7 @@
             this.btnChangePass = new System.Windows.Forms.Button();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.groupBox1.Controls.Add(this.btnChangePass);
             this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtFullName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtPhone);
             this.groupBox1.Controls.Add(this.label2);
@@ -86,6 +86,7 @@
             this.btnChangeInfo.TabIndex = 9;
             this.btnChangeInfo.Text = "Thay đỗi thông tin";
             this.btnChangeInfo.UseVisualStyleBackColor = true;
+            this.btnChangeInfo.Click += new System.EventHandler(this.btnChangeInfo_Click);
             // 
             // btnChangePass
             // 
@@ -115,13 +116,13 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Địa Chỉ";
             // 
-            // txtEmail
+            // txtFullName
             // 
-            this.txtEmail.Location = new System.Drawing.Point(104, 115);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(243, 20);
-            this.txtEmail.TabIndex = 5;
+            this.txtFullName.Location = new System.Drawing.Point(104, 115);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(243, 20);
+            this.txtFullName.TabIndex = 5;
             // 
             // label3
             // 
@@ -129,9 +130,9 @@
             this.label3.Location = new System.Drawing.Point(46, 119);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Email";
+            this.label3.Text = "Họ Tên";
             // 
             // txtPhone
             // 
@@ -147,9 +148,9 @@
             this.label2.Location = new System.Drawing.Point(46, 84);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Phone";
+            this.label2.Text = "Điện thoại";
             // 
             // txtUsernme
             // 
@@ -226,7 +227,7 @@
         private System.Windows.Forms.Button btnChangePass;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label2;

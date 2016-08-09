@@ -118,6 +118,23 @@ namespace Business_Tier.DataAccess
             }
         }
         //--------------------------------------------------
+        public bool updateInfoUser(Users b)
+        {
+            string SQL = "Update tblUser set name=@name,address=@address,phone=@phone where username=@username";
+            SqlParameter username = new SqlParameter("@username", b.UserName);
+            SqlParameter name = new SqlParameter("@name", b.Name);
+            SqlParameter address = new SqlParameter("@address", b.UserAddress);
+            SqlParameter phone = new SqlParameter("@phone", b.UserPhone);
+            try
+            {
+                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, username, name, address, phone);
+            }
+            catch (SqlException se)
+            {
+                throw new Exception(se.Message);
+            }
+        }
+        //--------------------------------------------------
         public bool deleteUser(Users b)
         {
             string SQL = "Delete tblUser where username=@username";
