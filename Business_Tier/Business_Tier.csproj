@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="DataAccess\UserBorrowData.cs" />
     <Compile Include="DataAccess\UserData.cs" />
+    <Compile Include="DataAccess\UserLogin.cs" />
     <Compile Include="Entities\UserBorrow.cs" />
+    <Compile Include="Entities\UserLoginEn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Users.cs" />
