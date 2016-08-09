@@ -44,9 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\AuthorData.cs" />
     <Compile Include="DataAccess\UserBorrowData.cs" />
     <Compile Include="DataAccess\UserData.cs" />
     <Compile Include="DataAccess\UserLogin.cs" />
+    <Compile Include="Entities\Author.cs" />
     <Compile Include="Entities\UserBorrow.cs" />
     <Compile Include="Entities\UserLoginEn.cs" />
     <Compile Include="Program.cs" />
