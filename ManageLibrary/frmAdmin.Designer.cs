@@ -84,7 +84,6 @@
             this.btnManageBorrowers.TabIndex = 3;
             this.btnManageBorrowers.Text = "Quản Lý Tài Khoản";
             this.btnManageBorrowers.UseVisualStyleBackColor = true;
-            this.btnManageBorrowers.Click += new System.EventHandler(this.btnManageBorrowers_Click);
             // 
             // button2
             // 

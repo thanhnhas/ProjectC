@@ -18,14 +18,8 @@ namespace ManageLibrary
         }
         public frmAdmin(string s)
         {
-            label1.Text = s;
             InitializeComponent();
-        }
-        private void btnManageBorrowers_Click(object sender, EventArgs e)
-        {
-            frmManageUsers mngUser = new frmManageUsers();
-            DialogResult r = mngUser.ShowDialog();
-
+            label4.Text = s;
         }
     }
 }

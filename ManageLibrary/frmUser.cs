@@ -21,6 +21,7 @@ namespace ManageLibrary
         public frmUser(string s)
         {
             InitializeComponent();
+            label1.Text = s;
         }
     }
 }
