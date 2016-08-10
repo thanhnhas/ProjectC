@@ -77,12 +77,6 @@
     <Compile Include="frm_UpdateBook.Designer.cs">
       <DependentUpon>frm_UpdateBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmNewBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,9 +102,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ManageBorrow.resx">
       <DependentUpon>frm_ManageBorrow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageAuthor.resx">
       <DependentUpon>frmManageAuthor.cs</DependentUpon>
