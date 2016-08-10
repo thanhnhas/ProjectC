@@ -16,7 +16,7 @@ namespace ManageLibrary
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmManageUsers());
             //check index value ok ok
 
         }
