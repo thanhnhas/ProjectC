@@ -36,18 +36,25 @@ namespace ManageLibrary
         private void btnOK_Click(object sender, EventArgs e)
         {
             txtUsername.Enabled = false;
-            u.UserName = txtUsername.Text;
-            u.Name = txtName.Text;
-            u.UserAddress = txtAddress.Text;
-            u.UserPhone = txtPhone.Text;
-            bool  flag = udt.updateInfoUser(u);
-            if (flag == true)
+            if (txtAddress.Text.Equals("") || txtName.Text.Equals("") || txtPhone.Text.Equals(""))
             {
-                MessageBox.Show("Save successful.");
+                MessageBox.Show("Vui long dien du thong tin");
             }
             else
             {
-                MessageBox.Show("Save fail.");
+                u.UserName = txtUsername.Text;
+                u.Name = txtName.Text;
+                u.UserAddress = txtAddress.Text;
+                u.UserPhone = txtPhone.Text;
+                bool flag = udt.updateInfoUser(u);
+                if (flag == true)
+                {
+                    MessageBox.Show("Cap nhat thong tin thanh cong.");
+                }
+                else
+                {
+                    MessageBox.Show("Cap nhat thong tin that bai.");
+                }
             }
         }
 
