@@ -56,7 +56,7 @@
             this.label1.Location = new System.Drawing.Point(219, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Tên Đăng Nhập";
             // 
             // txtUsername
@@ -64,14 +64,15 @@
             this.txtUsername.Location = new System.Drawing.Point(346, 68);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(208, 19);
-            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(346, 110);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(208, 19);
-            this.txtPassword.TabIndex = 5;
+            this.txtPassword.TabIndex = 2;
             // 
             // label2
             // 
@@ -79,7 +80,7 @@
             this.label2.Location = new System.Drawing.Point(219, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Mật Khẩu";
             // 
             // btnLogin
@@ -89,21 +90,23 @@
             this.btnLogin.Location = new System.Drawing.Point(237, 177);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(149, 32);
-            this.btnLogin.TabIndex = 6;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnCancel.ImageKey = "(none)";
             this.btnCancel.Location = new System.Drawing.Point(405, 177);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(149, 32);
-            this.btnCancel.TabIndex = 7;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Thoát";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label3
             // 
@@ -111,8 +114,9 @@
             this.label3.Location = new System.Drawing.Point(305, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Đăng Ký";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -120,13 +124,15 @@
             this.label4.Location = new System.Drawing.Point(405, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 13);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Quên Mật Khẩu";
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(590, 246);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -139,7 +145,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Name = "frmLogin";
-            this.Text = "Đăng Nhập";
+            this.Text = "1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
