@@ -59,6 +59,12 @@
     <Compile Include="frmChangeInfo.Designer.cs">
       <DependentUpon>frmChangeInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangeInfo.resx">
       <DependentUpon>frmChangeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ManageBorrow.resx">
       <DependentUpon>frm_ManageBorrow.cs</DependentUpon>
