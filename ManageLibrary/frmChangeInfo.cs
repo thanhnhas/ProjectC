@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Business_Tier.DataAccess;
 using Business_Tier.Entities;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace ManageLibrary
 {
@@ -28,6 +29,9 @@ namespace ManageLibrary
         {
             dtUser = udt.GetUserByUsername(txtUsername.Text).Tables[0];
             dtUser.PrimaryKey = new DataColumn[] { dtUser.Columns["username"] };
+            txtName.DataBindings.Clear();
+            txtPhone.DataBindings.Clear();
+            txtAddress.DataBindings.Clear();
             txtAddress.DataBindings.Add("Text", dtUser, "Address");
             txtPhone.DataBindings.Add("Text", dtUser, "Phone Number");
             txtName.DataBindings.Add("Text", dtUser, "Full Name");
@@ -42,7 +46,15 @@ namespace ManageLibrary
             }
             else
             {
-                u.UserName = txtUsername.Text;
+                if (Regex.IsMatch(txtName.Text, "^[a-zA-Z0-9]+$", RegexOptions.IgnoreCase))
+                {
+                    u.UserName = txtUsername.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Họ tên không hợp lệ");
+                    txtName.Focus();
+                }
                 u.Name = txtName.Text;
                 u.UserAddress = txtAddress.Text;
                 u.UserPhone = txtPhone.Text;
