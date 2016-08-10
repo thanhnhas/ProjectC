@@ -113,16 +113,12 @@ namespace ManageLibrary
 
         private void btnUserUpdate_Click(object sender, EventArgs e)
         {
-            txtUserPassword.Clear();
-            txtUsertype.Clear();
-            txtName.Clear();
-            txtUserAddress.Clear();
-            txtUserPhone.Clear();
-            txtUserCount.Clear();
-            txtUserStatus.Clear();
             this.EnableTxT(0);
             txtUsername.Enabled = false;
             btnUserUpdate.Enabled = false;
+            txtUserPassword.Enabled = false;
+            txtUserCount.Enabled = false;
+            txtUserStatus.Enabled = false;
             addOrEdit = false;
         }
 

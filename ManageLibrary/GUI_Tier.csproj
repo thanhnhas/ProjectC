@@ -53,6 +53,12 @@
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChangeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeInfo.Designer.cs">
+      <DependentUpon>frmChangeInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ManageBorrow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </Compile>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeInfo.resx">
+      <DependentUpon>frmChangeInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ManageBorrow.resx">
       <DependentUpon>frm_ManageBorrow.cs</DependentUpon>

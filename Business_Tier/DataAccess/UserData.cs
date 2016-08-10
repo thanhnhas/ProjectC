@@ -29,6 +29,22 @@ namespace Business_Tier.DataAccess
             }
             return dsUser;
         }
+        //--------------------------------------------------------------------
+        public DataSet GetUserByUsername(string username)
+        {
+            string SQL = "select u.username as 'Username' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count',s.name as 'Status' from tblUser u, tblType t,tblStatus s where u.type = t.type and s.statusID=u.status and username='"+username+"'";
+            DataSet dsUser = new DataSet();
+            try
+            {
+                dsUser = DataProvider.ExecuteQueryWithDataSet(SQL, CommandType.Text);
+
+            }
+            catch (SqlException se)
+            {
+                throw new Exception(se.Message);
+            }
+            return dsUser;
+        }
         //-----------------------------------------------------------------
         public List<Users> GetUserByDataReader()
         {
@@ -95,6 +111,23 @@ namespace Business_Tier.DataAccess
             try
             {
                 return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, username, password, type, name, address, phone, count, status);
+            }
+            catch (SqlException se)
+            {
+                throw new Exception(se.Message);
+            }
+        }
+        //--------------------------------------------------
+        public bool updateInfoUser(Users b)
+        {
+            string SQL = "Update tblUser set name=@name,address=@address,phone=@phone where username=@username";
+            SqlParameter username = new SqlParameter("@username", b.UserName);
+            SqlParameter name = new SqlParameter("@name", b.Name);
+            SqlParameter address = new SqlParameter("@address", b.UserAddress);
+            SqlParameter phone = new SqlParameter("@phone", b.UserPhone);
+            try
+            {
+                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, username, name, address, phone);
             }
             catch (SqlException se)
             {
