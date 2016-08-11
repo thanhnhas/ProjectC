@@ -26,10 +26,12 @@ namespace ManageLibrary
         {
            dtUser = udt.GetUserByUsername(txtUsernme.Text).Tables[0];
             dtUser.PrimaryKey = new DataColumn[] { dtUser.Columns["username"] };
+            txtPassword.DataBindings.Add("Text", dtUser, "Password");
             txtAddress.DataBindings.Add("Text",dtUser ,"Address");
             txtPhone.DataBindings.Add("Text", dtUser, "Phone Number");
             txtFullName.DataBindings.Add("Text", dtUser, "Full Name");
             txtPhone.Enabled = false;
+            txtPassword.Enabled = false;
             txtAddress.Enabled = false;
             txtFullName.Enabled = false;
             txtUsernme.Enabled = false;
@@ -39,6 +41,23 @@ namespace ManageLibrary
         {
             frmChangeInfo mngChange = new frmChangeInfo(txtUsernme.Text);
             mngChange.ShowDialog();
+        }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            frmChangePass ChangePass = new frmChangePass(txtUsernme.Text,txtPassword.Text);
+            ChangePass.ShowDialog();
+        }
+
+        private void btnSuggest_Click(object sender, EventArgs e)
+        {
+            frmNewBook suggest = new frmNewBook(txtUsernme.Text);
+            suggest.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            this.OnLoad(e);
         }
     }
     

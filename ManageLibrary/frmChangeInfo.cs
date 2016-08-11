@@ -46,15 +46,7 @@ namespace ManageLibrary
             }
             else
             {
-                if (Regex.IsMatch(txtName.Text, "^[a-zA-Z0-9]+$", RegexOptions.IgnoreCase))
-                {
-                    u.UserName = txtUsername.Text;
-                }
-                else
-                {
-                    MessageBox.Show("Họ tên không hợp lệ");
-                    txtName.Focus();
-                }
+                u.UserName = txtUsername.Text;
                 u.Name = txtName.Text;
                 u.UserAddress = txtAddress.Text;
                 u.UserPhone = txtPhone.Text;
@@ -65,7 +57,7 @@ namespace ManageLibrary
                 }
                 else
                 {
-                    MessageBox.Show("Cap nhat thong tin that bai.");
+                    MessageBox.Show("Cap nhat thong tin không thành công.");
                 }
             }
         }

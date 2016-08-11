@@ -32,7 +32,7 @@ namespace Business_Tier.DataAccess
         //--------------------------------------------------------------------
         public DataSet GetUserByUsername(string username)
         {
-            string SQL = "select u.username as 'Username' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count',s.name as 'Status' from tblUser u, tblType t,tblStatus s where u.type = t.type and s.statusID=u.status and username='"+username+"'";
+            string SQL = "select u.username as 'Username' , u.password as 'Password' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count',s.name as 'Status' from tblUser u, tblType t,tblStatus s where u.type = t.type and s.statusID=u.status and username='"+username+"'";
             DataSet dsUser = new DataSet();
             try
             {
@@ -114,6 +114,22 @@ namespace Business_Tier.DataAccess
             }
             catch (SqlException se)
             {
+                throw new Exception(se.Message);
+            }
+        }
+        //--------------------------------------------------
+        public bool updatePassword(Users b)
+        {
+            String sql = "Update tblUser set password=@password where username=@username";
+            SqlParameter username = new SqlParameter("@username", b.UserName);
+            SqlParameter password = new SqlParameter("@password", b.UserPassword);
+            try
+            {
+                return DataProvider.ExecuteNonQuery(sql, CommandType.Text, username, password);
+            }
+            catch (Exception se)
+            {
+
                 throw new Exception(se.Message);
             }
         }
