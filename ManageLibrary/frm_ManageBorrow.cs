@@ -391,6 +391,11 @@ namespace ManageLibrary
             return false;
         }
 
+        private void rdtTenSach_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
             String MaSach = txtMaSachMuon.Text;

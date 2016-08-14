@@ -217,8 +217,10 @@
             // 
             // tabQL
             // 
+            this.tabQL.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabQL.Controls.Add(this.tabTraSach);
             this.tabQL.Controls.Add(this.tabMuonSach);
+            this.tabQL.ItemSize = new System.Drawing.Size(107, 35);
             this.tabQL.Location = new System.Drawing.Point(3, 0);
             this.tabQL.Name = "tabQL";
             this.tabQL.SelectedIndex = 0;
@@ -229,10 +231,10 @@
             // tabTraSach
             // 
             this.tabTraSach.Controls.Add(this.grpTraSach);
-            this.tabTraSach.Location = new System.Drawing.Point(4, 25);
+            this.tabTraSach.Location = new System.Drawing.Point(4, 28);
             this.tabTraSach.Name = "tabTraSach";
             this.tabTraSach.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTraSach.Size = new System.Drawing.Size(1227, 771);
+            this.tabTraSach.Size = new System.Drawing.Size(1227, 768);
             this.tabTraSach.TabIndex = 0;
             this.tabTraSach.Text = "Quản lý trả sách";
             this.tabTraSach.UseVisualStyleBackColor = true;
@@ -425,10 +427,10 @@
             // tabMuonSach
             // 
             this.tabMuonSach.Controls.Add(this.grpMuonSach);
-            this.tabMuonSach.Location = new System.Drawing.Point(4, 25);
+            this.tabMuonSach.Location = new System.Drawing.Point(4, 39);
             this.tabMuonSach.Name = "tabMuonSach";
             this.tabMuonSach.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMuonSach.Size = new System.Drawing.Size(1227, 771);
+            this.tabMuonSach.Size = new System.Drawing.Size(1227, 757);
             this.tabMuonSach.TabIndex = 1;
             this.tabMuonSach.Text = "Quản lý mượn sách";
             this.tabMuonSach.UseVisualStyleBackColor = true;
@@ -835,6 +837,7 @@
             this.rdtTenSach.Tag = "SearchSelection";
             this.rdtTenSach.Text = "Tên sách";
             this.rdtTenSach.UseVisualStyleBackColor = true;
+            this.rdtTenSach.CheckedChanged += new System.EventHandler(this.rdtTenSach_CheckedChanged);
             this.rdtTenSach.Click += new System.EventHandler(this.rdtTenSach_Click);
             // 
             // dgvKetQuaTimSach
@@ -869,6 +872,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1244, 760);
             this.Controls.Add(this.tabQL);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frm_ManageBorrow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mượn Trả Sách";

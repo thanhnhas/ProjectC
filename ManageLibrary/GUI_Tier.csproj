@@ -121,6 +121,12 @@
     <Compile Include="frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Splash Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash Screen.Designer.cs">
+      <DependentUpon>Splash Screen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +162,9 @@
     <EmbeddedResource Include="frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Splash Screen.resx">
+      <DependentUpon>Splash Screen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -183,6 +192,12 @@
       <Project>{184d4e4e-799e-4f7c-9429-bb5cfa5c48ec}</Project>
       <Name>DataProvider</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashscreeb.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
