@@ -15,8 +15,7 @@ namespace ManageLibrary
 {
     public partial class frmLogin : Form
     {
-        DataTable dt = new DataTable();
-        UserLogin ul = new UserLogin();
+        UserLoginDB ul = new UserLoginDB();
 
         public frmLogin()
         {
@@ -63,9 +62,9 @@ namespace ManageLibrary
 
         private void label3_Click(object sender, EventArgs e)
         {
-            frmAdmin mngAdmin = new frmAdmin(txtUsername.Text);
+            frmRegis frmRegis = new frmRegis();
             this.Hide();
-            mngAdmin.ShowDialog();
+            frmRegis.ShowDialog();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -82,5 +81,35 @@ namespace ManageLibrary
                 this.Close();
             }
         }
+
+        private void label3_MouseEnter(object sender, EventArgs e)
+        {
+            // Set the border to a three-dimensional border.
+            label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            // Set the border to a three-dimensional border.
+            label3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+        }
+
+        private void label4_MouseEnter(object sender, EventArgs e)
+        {
+            // Set the border to a three-dimensional border.
+            label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        }
+
+        private void label4_MouseLeave(object sender, EventArgs e)
+        {
+            // Set the border to a three-dimensional border.
+            label4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+//*

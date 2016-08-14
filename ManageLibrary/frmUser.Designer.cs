@@ -40,7 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsernme = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSearchUser = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -170,15 +170,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
-            // button2
+            // btnSearchUser
             // 
-            this.button2.Location = new System.Drawing.Point(540, 102);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 32);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Tìm kiếm trong kho sách";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSearchUser.Location = new System.Drawing.Point(540, 102);
+            this.btnSearchUser.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearchUser.Name = "btnSearchUser";
+            this.btnSearchUser.Size = new System.Drawing.Size(143, 32);
+            this.btnSearchUser.TabIndex = 3;
+            this.btnSearchUser.Text = "Tìm kiếm trong kho sách";
+            this.btnSearchUser.UseVisualStyleBackColor = true;
+            this.btnSearchUser.Click += new System.EventHandler(this.btnSearchUser_Click);
             // 
             // button3
             // 
@@ -207,7 +208,7 @@
             this.ClientSize = new System.Drawing.Size(760, 297);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSearchUser);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -233,7 +234,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsernme;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSearchUser;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button7;
     }
