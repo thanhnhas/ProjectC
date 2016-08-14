@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Business_Tier.Entities
 {
-    class ManageBorrowEntity
+    public class BookType
     {
+        public String ID { get; set; }
+        public String Name { get; set; }
     }
 }
