@@ -40,6 +40,11 @@ namespace ManageLibrary
             frmChangeInfo mngChange = new frmChangeInfo(txtUsernme.Text);
             mngChange.ShowDialog();
         }
+
+        private void btnSearchUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

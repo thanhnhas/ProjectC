@@ -10,7 +10,7 @@ using System.Data;
 using Business_Tier.Entities;
 namespace Business_Tier.DataAccess
 {
-    public class UserLogin
+    public class UserLoginDB
     {
 
         //-----------------------//

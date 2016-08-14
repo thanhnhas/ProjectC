@@ -117,6 +117,8 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Đăng Ký";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
+            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             // 
             // label4
             // 
@@ -126,6 +128,8 @@
             this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Quên Mật Khẩu";
+            this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
+            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
             // frmLogin
             // 
@@ -146,6 +150,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Name = "frmLogin";
             this.Text = "1";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
