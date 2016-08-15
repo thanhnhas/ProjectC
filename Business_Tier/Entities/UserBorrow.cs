@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business_Tier.Entities
 {
+    // userborrow
     public class UserBorrow
     {
         public int ID { get; set; }

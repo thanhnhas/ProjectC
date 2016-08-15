@@ -11,6 +11,7 @@ using Business_Tier.Entities;
 
 namespace Business_Tier.DataAccess
 {
+    //function new book
     public class NewBookStore
     {
         public bool addNewSuggest(NewBook b)

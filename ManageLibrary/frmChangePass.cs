@@ -28,7 +28,7 @@ namespace ManageLibrary
             txtPassOld.Clear();
             txtPassConfirm.Clear();
         }
-
+        //đổi pass
         private void btnOK_Click(object sender, EventArgs e)
         {
             bool check = true;

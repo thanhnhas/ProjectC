@@ -22,7 +22,7 @@ namespace ManageLibrary
         }
         NewBookStore bdt = new NewBookStore();
         NewBook nb = new NewBook();
-
+        //đề nghị thêm sách
         private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))

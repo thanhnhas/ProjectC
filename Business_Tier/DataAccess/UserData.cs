@@ -11,6 +11,7 @@ using Business_Tier.Entities;
 
 namespace Business_Tier.DataAccess
 {
+    //function load info
     public class UserData
     {
         //-----------------------------------------------------------------
