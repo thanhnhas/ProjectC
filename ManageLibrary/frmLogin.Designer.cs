@@ -55,7 +55,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(219, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(109, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên Đăng Nhập";
             // 
@@ -63,7 +63,7 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(346, 68);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(208, 19);
+            this.txtUsername.Size = new System.Drawing.Size(208, 22);
             this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
@@ -71,7 +71,7 @@
             this.txtPassword.Location = new System.Drawing.Point(346, 110);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(208, 19);
+            this.txtPassword.Size = new System.Drawing.Size(208, 22);
             this.txtPassword.TabIndex = 2;
             // 
             // label2
@@ -79,7 +79,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(219, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật Khẩu";
             // 
@@ -113,7 +113,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(305, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Đăng Ký";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -125,7 +125,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(405, 144);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.Size = new System.Drawing.Size(107, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Quên Mật Khẩu";
             this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
@@ -134,7 +134,7 @@
             // frmLogin
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(590, 246);
@@ -149,7 +149,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Name = "frmLogin";
-            this.Text = "1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đăng nhập vào hệ thống";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -143,5 +143,15 @@ namespace ManageLibrary
         {
             this.Close();
         }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            btnUserAdd_Click(null, null);
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            btnUserDelete_Click(null, null);
+        }
     }
 }
