@@ -22,6 +22,7 @@ namespace ManageLibrary
         UserData udt = new UserData();
         DataTable dtUser;
         Users u = new Users();
+        //load
         private void frmUser_Load(object sender, EventArgs e)
         {
            dtUser = udt.GetUserByUsername(txtUsernme.Text).Tables[0];
