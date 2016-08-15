@@ -20,7 +20,7 @@ namespace ManageLibrary
             InitializeComponent();
             txtUsername.Text = s;
         }
-
+        //đổi thông tin
         UserData udt = new UserData();
         DataTable dtUser;
         Users u = new Users();

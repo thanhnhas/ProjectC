@@ -23,6 +23,7 @@ namespace ManageLibrary
         UserBorrow b = new UserBorrow();
         DataTable dtBorrow;
         UserBorrowData udb = new UserBorrowData();
+        //xin gia hạn
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             TimeSpan songay = txtGHan.Value - txtToDate.Value;

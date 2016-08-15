@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business_Tier.Entities
 {
+    //newbook
     public class NewBook
     {
         public string username { get; set; }
