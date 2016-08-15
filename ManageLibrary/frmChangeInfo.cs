@@ -41,7 +41,7 @@ namespace ManageLibrary
             txtUsername.Enabled = false;
             if (txtAddress.Text.Equals("") || txtName.Text.Equals("") || txtPhone.Text.Equals(""))
             {
-                MessageBox.Show("Vui long dien du thong tin");
+                MessageBox.Show("Vui lòng điền đủ thông tin");
             }
             else
             {
@@ -52,11 +52,11 @@ namespace ManageLibrary
                 bool flag = udt.updateInfoUser(u);
                 if (flag == true)
                 {
-                    MessageBox.Show("Cap nhat thong tin thanh cong.");
+                    MessageBox.Show("Cập nhật thông tin thành công.");
                 }
                 else
                 {
-                    MessageBox.Show("Cap nhat thong tin không thành công.");
+                    MessageBox.Show("Cập nhật thông tin thất bại.");
                 }
             }
         }
