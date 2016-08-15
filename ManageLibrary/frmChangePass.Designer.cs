@@ -109,6 +109,7 @@
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lbusername
             // 
@@ -146,7 +147,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOK);
             this.Name = "frmChangePass";
-            this.Text = "frmChangePass";
+            this.Text = "Đổi mật khẩu";
             this.Load += new System.EventHandler(this.frmChangePass_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

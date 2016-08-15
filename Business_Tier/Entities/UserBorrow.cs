@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Business_Tier.Entities
 {
-    class UserBorrow
+    public class UserBorrow
     {
         public int ID { get; set; }
-        public String username { get; set; }
-        public DateTime fromDate { get; set; }
+        public string username { get; set; }
+        public string fromDate { get; set; }
         public DateTime toDate { get; set; }
         public bool status { get; set; }
-        public DateTime deadline { get; set; }
+        public string bookName { get; set; }
     }
 }

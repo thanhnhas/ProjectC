@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business_Tier.DataAccess;
 using Business_Tier.Entities;
-using System.Data;
 using System.Text.RegularExpressions;
 
 namespace ManageLibrary
@@ -64,7 +63,21 @@ namespace ManageLibrary
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thoát",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+                this.Close();
+        }
+
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Char.IsDigit(e.KeyChar) --> kiểm tra xem phím vừa nhập vào textbox có phải là ký tự số hay không, hàm này trả về kiểu bool
+            //Char.IsContro(e.KeyChar)-- > kiểm tra xem phím vừa nhập vào textbox có phải là các ký tự điều khiển
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

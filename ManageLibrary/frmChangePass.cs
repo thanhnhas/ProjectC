@@ -21,7 +21,6 @@ namespace ManageLibrary
             lbpassword.Text = password;
         }
         UserData udt = new UserData();
-        DataTable dtUser;
         Users u = new Users();
         private void frmChangePass_Load(object sender, EventArgs e)
         {
@@ -71,6 +70,14 @@ namespace ManageLibrary
                     MessageBox.Show("Cập nhật mật khẩu không thành công");
                 }
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thoát",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+                this.Close();
         }
     }
 }

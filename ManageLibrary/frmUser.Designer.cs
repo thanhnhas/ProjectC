@@ -58,6 +58,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Quản lý sách đã mượn";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -108,7 +109,7 @@
             this.btnChangeInfo.Name = "btnChangeInfo";
             this.btnChangeInfo.Size = new System.Drawing.Size(116, 26);
             this.btnChangeInfo.TabIndex = 9;
-            this.btnChangeInfo.Text = "Thay đỗi thông tin";
+            this.btnChangeInfo.Text = "Thay đổi thông tin";
             this.btnChangeInfo.UseVisualStyleBackColor = true;
             this.btnChangeInfo.Click += new System.EventHandler(this.btnChangeInfo_Click);
             // 
@@ -119,7 +120,7 @@
             this.btnChangePass.Name = "btnChangePass";
             this.btnChangePass.Size = new System.Drawing.Size(110, 26);
             this.btnChangePass.TabIndex = 5;
-            this.btnChangePass.Text = "Thay đỗi mật khẩu";
+            this.btnChangePass.Text = "Thay đổi mật khẩu";
             this.btnChangePass.UseVisualStyleBackColor = true;
             this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
@@ -212,8 +213,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 32);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Thoát";
+            this.button3.Text = "Đăng xuất";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnSuggest
             // 
@@ -250,7 +252,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUser";
-            this.Text = "User";
+            this.Text = "Thông tin người dùng";
             this.Load += new System.EventHandler(this.frmUser_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
