@@ -47,6 +47,8 @@
     <Compile Include="DataAccess\AuthorData.cs" />
     <Compile Include="DataAccess\BookData.cs" />
     <Compile Include="DataAccess\BorrowDetailsData.cs" />
+    <Compile Include="DataAccess\ManageBorrowData.cs" />
+    <Compile Include="DataAccess\NewBookStore.cs" />
     <Compile Include="DataAccess\UserBorrowData.cs" />
     <Compile Include="DataAccess\UserData.cs" />
     <Compile Include="DataAccess\UserLoginDB.cs" />
@@ -56,6 +58,8 @@
     <Compile Include="Entities\BookType.cs" />
     <Compile Include="Entities\BorrowDetails.cs" />
     <Compile Include="Entities\Publisher.cs" />
+    <Compile Include="Entities\ManageBorrowEntity.cs" />
+    <Compile Include="Entities\NewBook.cs" />
     <Compile Include="Entities\UserBorrow.cs" />
     <Compile Include="Entities\UserLoginEn.cs" />
     <Compile Include="Entities\UserRegisEn.cs" />

@@ -22,17 +22,29 @@ namespace ManageLibrary
         UserData udt = new UserData();
         DataTable dtUser;
         Users u = new Users();
-        private void frmUser_Load(object sender, EventArgs e)
+        private void loadData()
+            //load form
         {
-           dtUser = udt.GetUserByUsername(txtUsernme.Text).Tables[0];
-            dtUser.PrimaryKey = new DataColumn[] { dtUser.Columns["username"] };
-            txtAddress.DataBindings.Add("Text",dtUser ,"Address");
+            dtUser = udt.GetUserByUsername(txtUsernme.Text).Tables[0];
+            //dtUser.PrimaryKey = new DataColumn[] { dtUser.Columns["username"] };
+            txtPassword.DataBindings.Clear();
+            txtUsernme.DataBindings.Clear();
+            txtAddress.DataBindings.Clear();
+            txtFullName.DataBindings.Clear();
+            txtPhone.DataBindings.Clear();
+            txtPassword.DataBindings.Add("Text", dtUser, "Password");
+            txtAddress.DataBindings.Add("Text", dtUser, "Address");
             txtPhone.DataBindings.Add("Text", dtUser, "Phone Number");
             txtFullName.DataBindings.Add("Text", dtUser, "Full Name");
             txtPhone.Enabled = false;
+            txtPassword.Enabled = false;
             txtAddress.Enabled = false;
             txtFullName.Enabled = false;
             txtUsernme.Enabled = false;
+        }
+        public void frmUser_Load(object sender, EventArgs e)
+        {
+            loadData();
         }
 
         private void btnChangeInfo_Click(object sender, EventArgs e)
@@ -41,9 +53,37 @@ namespace ManageLibrary
             mngChange.ShowDialog();
         }
 
-        private void btnSearchUser_Click(object sender, EventArgs e)
+        private void btnChangePass_Click(object sender, EventArgs e)
         {
+            frmChangePass ChangePass = new frmChangePass(txtUsernme.Text,txtPassword.Text);
+            ChangePass.ShowDialog();
+        }
 
+        private void btnSuggest_Click(object sender, EventArgs e)
+        {
+            frmNewBook suggest = new frmNewBook(txtUsernme.Text);
+            suggest.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmUserManageBook mnb = new frmUserManageBook(txtUsernme.Text);
+            mnb.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Thoát",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                Application.Restart();
+            }
         }
     }
     

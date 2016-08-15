@@ -104,6 +104,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(122, 20);
             this.txtPhone.TabIndex = 5;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
             // btnOK
             // 
@@ -141,7 +142,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
             this.Name = "frmChangeInfo";
-            this.Text = "frmChangeInfo";
+            this.Text = "Cập nhật thông tin";
             this.Load += new System.EventHandler(this.frmChangeInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
