@@ -23,6 +23,7 @@ namespace ManageLibrary
         DataTable dtUser;
         Users u = new Users();
         private void loadData()
+            //load form
         {
             dtUser = udt.GetUserByUsername(txtUsernme.Text).Tables[0];
             //dtUser.PrimaryKey = new DataColumn[] { dtUser.Columns["username"] };
