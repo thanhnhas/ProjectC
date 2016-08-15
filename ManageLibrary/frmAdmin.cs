@@ -16,16 +16,34 @@ namespace ManageLibrary
         {
             InitializeComponent();
         }
-        public frmAdmin(string s)
+        public frmAdmin(String name)
         {
             InitializeComponent();
-            label4.Text = s;
         }
 
-        private void btnManageBorrowers_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            frmManageUsers mus = new frmManageUsers();
-            mus.ShowDialog();
+            this.Close();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAuthor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
