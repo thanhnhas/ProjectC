@@ -17,7 +17,7 @@ namespace Business_Tier.DataAccess
         //-----------------------------------------------------------------
         public DataSet GetUserByDataSet()
         {
-            string SQL = "select u.username as 'Username' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count',s.name as 'Status' from tblUser u, tblType t,tblStatus s where u.type = t.type and s.statusID=u.status";
+            string SQL = "select u.username as 'Username' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count' from tblUser u, tblType t where u.type = t.type";
             DataSet dsUser = new DataSet();
             try
             {
@@ -33,7 +33,7 @@ namespace Business_Tier.DataAccess
         //--------------------------------------------------------------------
         public DataSet GetUserByUsername(string username)
         {
-            string SQL = "select u.username as 'Username' , u.password as 'Password' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count',s.name as 'Status' from tblUser u, tblType t,tblStatus s where u.type = t.type and s.statusID=u.status and username='"+username+"'";
+            string SQL = "select u.username as 'Username' , u.password as 'Password' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count' from tblUser u, tblType t where u.type = t.type  and username='"+username+"'";
             DataSet dsUser = new DataSet();
             try
             {
