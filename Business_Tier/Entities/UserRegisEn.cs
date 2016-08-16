@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Business_Tier.Entities
 {
-    public partial class frmSearch : Form
+    public class UserRegisEn
     {
-        public frmSearch()
-        {
-            InitializeComponent();
-        }
+        public string ID { get; set; }
+        public string PWD { get; set; }
     }
 }
