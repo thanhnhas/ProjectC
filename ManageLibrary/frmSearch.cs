@@ -13,6 +13,8 @@ namespace ManageLibrary
 {
     public partial class frmSearch : Form
     {
+
+        BorrowDetailsData bdd = new BorrowDetailsData();
         public frmSearch()
         {
             InitializeComponent();
@@ -22,7 +24,6 @@ namespace ManageLibrary
         //bổ sung
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            BorrowDetailsData bdd = new BorrowDetailsData();
             if (radioButton1.Checked)
             {
                 if (txtSearch.Text != "")
@@ -84,6 +85,22 @@ namespace ManageLibrary
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmSearch_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bdd.GetBookListFullByDataSet().Tables[0];
+            dataGridView1.Columns.Remove("Quantity");
+            dataGridView1.Columns.Remove("SLGoc");
+            dataGridView1.Columns.Remove("SLMuon");
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+            {
+                frmSearch_Load(null, null);
+            }
         }
     }
 }
