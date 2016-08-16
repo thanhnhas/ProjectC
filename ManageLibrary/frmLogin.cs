@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Business_Tier.DataAccess;
 using Business_Tier.Entities;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace ManageLibrary
 {
@@ -19,7 +20,16 @@ namespace ManageLibrary
 
         public frmLogin()
         {
+            Thread t = new Thread(new ThreadStart(SplashScreen));
+            t.Start();
+            Thread.Sleep(2000);
             InitializeComponent();
+            //hàm này có tác dụng hủy
+            t.Abort();
+        }
+        private void SplashScreen()
+        {
+            Application.Run(new frmLoadForm());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
