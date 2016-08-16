@@ -56,7 +56,7 @@
             this.txtBookName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBookName.Name = "txtBookName";
             this.txtBookName.Size = new System.Drawing.Size(445, 22);
-            this.txtBookName.TabIndex = 1;
+            this.txtBookName.TabIndex = 0;
             // 
             // txtAuthor
             // 
@@ -64,7 +64,7 @@
             this.txtAuthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(445, 22);
-            this.txtAuthor.TabIndex = 3;
+            this.txtAuthor.TabIndex = 1;
             // 
             // label2
             // 
@@ -90,7 +90,7 @@
             this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(445, 137);
-            this.txtDescription.TabIndex = 5;
+            this.txtDescription.TabIndex = 3;
             this.txtDescription.Text = "";
             // 
             // btnInsert
@@ -99,7 +99,7 @@
             this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(121, 47);
-            this.btnInsert.TabIndex = 6;
+            this.btnInsert.TabIndex = 4;
             this.btnInsert.Text = "Đề xuất";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click_1);
@@ -110,7 +110,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 47);
-            this.button2.TabIndex = 7;
+            this.button2.TabIndex = 5;
             this.button2.Text = "Thoát";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -140,7 +140,7 @@
             this.txtYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(169, 22);
-            this.txtYear.TabIndex = 10;
+            this.txtYear.TabIndex = 2;
             this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
             // 
             // frmNewBook

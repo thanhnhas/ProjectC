@@ -54,7 +54,7 @@
             this.groupBox2.Location = new System.Drawing.Point(529, 39);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(480, 274);
-            this.groupBox2.TabIndex = 20;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Tác Giả";
             // 
@@ -76,7 +76,7 @@
             this.btnAuthorExit.Location = new System.Drawing.Point(802, 343);
             this.btnAuthorExit.Name = "btnAuthorExit";
             this.btnAuthorExit.Size = new System.Drawing.Size(117, 50);
-            this.btnAuthorExit.TabIndex = 19;
+            this.btnAuthorExit.TabIndex = 6;
             this.btnAuthorExit.Text = "Thoát";
             this.btnAuthorExit.UseVisualStyleBackColor = true;
             this.btnAuthorExit.Click += new System.EventHandler(this.btnAuthorExit_Click);
@@ -86,7 +86,7 @@
             this.btnAuthorDelete.Location = new System.Drawing.Point(625, 343);
             this.btnAuthorDelete.Name = "btnAuthorDelete";
             this.btnAuthorDelete.Size = new System.Drawing.Size(117, 50);
-            this.btnAuthorDelete.TabIndex = 18;
+            this.btnAuthorDelete.TabIndex = 5;
             this.btnAuthorDelete.Text = "Xóa";
             this.btnAuthorDelete.UseVisualStyleBackColor = true;
             this.btnAuthorDelete.Click += new System.EventHandler(this.btnAuthorDelete_Click);
@@ -96,7 +96,7 @@
             this.btnAuthorUpdate.Location = new System.Drawing.Point(447, 343);
             this.btnAuthorUpdate.Name = "btnAuthorUpdate";
             this.btnAuthorUpdate.Size = new System.Drawing.Size(117, 50);
-            this.btnAuthorUpdate.TabIndex = 17;
+            this.btnAuthorUpdate.TabIndex = 4;
             this.btnAuthorUpdate.Text = "Sửa";
             this.btnAuthorUpdate.UseVisualStyleBackColor = true;
             this.btnAuthorUpdate.Click += new System.EventHandler(this.btnAuthorUpdate_Click);
@@ -107,7 +107,7 @@
             this.btnAuthorSave.Location = new System.Drawing.Point(280, 343);
             this.btnAuthorSave.Name = "btnAuthorSave";
             this.btnAuthorSave.Size = new System.Drawing.Size(117, 50);
-            this.btnAuthorSave.TabIndex = 16;
+            this.btnAuthorSave.TabIndex = 3;
             this.btnAuthorSave.Text = "Lưu";
             this.btnAuthorSave.UseVisualStyleBackColor = true;
             this.btnAuthorSave.Click += new System.EventHandler(this.btnAuthorSave_Click);
@@ -117,7 +117,7 @@
             this.btnAuthorAdd.Location = new System.Drawing.Point(106, 343);
             this.btnAuthorAdd.Name = "btnAuthorAdd";
             this.btnAuthorAdd.Size = new System.Drawing.Size(117, 50);
-            this.btnAuthorAdd.TabIndex = 15;
+            this.btnAuthorAdd.TabIndex = 2;
             this.btnAuthorAdd.Text = "Thêm";
             this.btnAuthorAdd.UseVisualStyleBackColor = true;
             this.btnAuthorAdd.Click += new System.EventHandler(this.btnAuthorAdd_Click);
@@ -131,7 +131,7 @@
             this.groupBox1.Location = new System.Drawing.Point(25, 39);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(456, 268);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi Tiết Tác Giả";
             // 
@@ -141,7 +141,7 @@
             this.txtAuthorName.Location = new System.Drawing.Point(128, 157);
             this.txtAuthorName.Name = "txtAuthorName";
             this.txtAuthorName.Size = new System.Drawing.Size(304, 22);
-            this.txtAuthorName.TabIndex = 6;
+            this.txtAuthorName.TabIndex = 1;
             // 
             // label3
             // 
@@ -158,7 +158,7 @@
             this.txtAuthorID.Location = new System.Drawing.Point(128, 95);
             this.txtAuthorID.Name = "txtAuthorID";
             this.txtAuthorID.Size = new System.Drawing.Size(304, 22);
-            this.txtAuthorID.TabIndex = 1;
+            this.txtAuthorID.TabIndex = 0;
             // 
             // label1
             // 

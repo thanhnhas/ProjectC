@@ -277,9 +277,15 @@ namespace ManageLibrary
         //VALIDATE DATA
         bool validPublisher(Publisher p)
         {
-            if (p.ID.Length <= 2 && p.ID.Length >= 6)
+            if (p.ID == "" || p.Name == "" || p.Address =="" || p.Phone == "")
             {
-                MessageBox.Show("ID phải có độ dài từ 2 -> 6 kí tự", "ID Format",
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Missing Information",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            if (p.ID.Length < 4 || p.ID.Length > 8)
+            {
+                MessageBox.Show("ID phải có độ dài từ 4 -> 8 kí tự", "ID Format",
                             MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
@@ -289,7 +295,7 @@ namespace ManageLibrary
                             MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
-            if (p.Phone.Length < 8 && p.Phone.Length > 11)
+            if (p.Phone.Length < 8 || p.Phone.Length > 11)
             {
                 MessageBox.Show("Số điện thoại phải có từ 8 -> 11 số", "Phone Number Format",
                             MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -441,6 +447,29 @@ namespace ManageLibrary
 
 
         /*------------------------- BOOK TYPE MANAGEMENT -----------------------*/
+        //VALIDATE DATA
+        bool validBookType(BookType bt)
+        {
+            if (bt.ID == "" || bt.Name == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã và tên thể loại", "Missing Information",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            if (bt.ID.Length < 2 || bt.ID.Length > 6)
+            {
+                MessageBox.Show("ID phải có độ dài từ 2 -> 6 kí tự", "ID Format",
+                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            if (bt.Name.Length > 30)
+            {
+                MessageBox.Show("Tên không được vượt quá 30 kí tự", "Name Format",
+                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }           
+            return true;
+        }
         //CLEAR TEXTBOX AND SET TEXTBOX IS EDITABE -> SET SAVE STATE: ADD NEW
         private void btnAddBookType_Click(object sender, EventArgs e)
         {
@@ -459,6 +488,7 @@ namespace ManageLibrary
             String ID = txtBookTypeID.Text;
             String Name = txtBookTypeName.Text;
             BookType bt = new BookType { ID = ID, Name = Name};
+            if (!validBookType(bt)) return;
             if (IsBookTypeAddNew)
             {
                 try
@@ -569,9 +599,33 @@ namespace ManageLibrary
         {
             this.Close();
         }
-        
+
 
         /*------------------------- BOOK MANAGEMENT -----------------------*/
+        //VALIDATE DATA
+        bool validBook(Book b)
+        {
+            if (b.ISBN == "" || b.Name == "" || b.Quantity == 0)
+            {
+                MessageBox.Show("Vui lòng không để trống thông  tin", "Missing Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            if (b.ISBN.Length < 4 || b.ISBN.Length > 13)
+            {
+                MessageBox.Show("ISBN phải có độ dài từ 4 -> 13 kí tự", "ISBN Format",
+                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            if (b.Name.Length > 30)
+            {
+                MessageBox.Show("Tên không được vượt quá 30 kí tự", "Name Format",
+                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+
+            return true;
+        }
         //CLEAR TEXTBOX AND SET TEXTBOX IS EDITABE -> SET SAVE STATE: ADD NEW
         private void btnAddBook_Click(object sender, EventArgs e)
         {
@@ -593,7 +647,7 @@ namespace ManageLibrary
             String TypeID = DTcbbBookTypeID[cbbBookType.SelectedIndex];
             String AuthorID = DTcbbAuthorID[cbbAuthor.SelectedIndex];
             String PublisherID = DTcbbPublisherID[cbbPublisher.SelectedIndex];
-            int Quantity = int.Parse(txtQuantity.Text);
+            int Quantity = int.Parse( 0 + txtQuantity.Text);
             Book b = new Book
             {
                 ISBN = ISBN,
@@ -603,6 +657,7 @@ namespace ManageLibrary
                 PublisherID = PublisherID,
                 Quantity = Quantity
             };
+            if (!validBook(b)) return;
             if (IsBookAddNew)
             {
                 try

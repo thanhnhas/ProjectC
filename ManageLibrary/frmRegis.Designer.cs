@@ -68,7 +68,7 @@
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(375, 15);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(191, 22);
             this.txtID.TabIndex = 0;
@@ -76,7 +76,7 @@
             // txtPwd
             // 
             this.txtPwd.Location = new System.Drawing.Point(375, 63);
-            this.txtPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPwd.Margin = new System.Windows.Forms.Padding(4);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(232, 22);
@@ -85,7 +85,7 @@
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(240, 262);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(100, 28);
             this.btnRegister.TabIndex = 5;
@@ -97,7 +97,7 @@
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(508, 262);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 6;
@@ -129,7 +129,7 @@
             // txtRePwd
             // 
             this.txtRePwd.Location = new System.Drawing.Point(375, 95);
-            this.txtRePwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRePwd.Margin = new System.Windows.Forms.Padding(4);
             this.txtRePwd.Name = "txtRePwd";
             this.txtRePwd.PasswordChar = '*';
             this.txtRePwd.Size = new System.Drawing.Size(232, 22);
@@ -149,7 +149,7 @@
             // txtReCap
             // 
             this.txtReCap.Location = new System.Drawing.Point(361, 220);
-            this.txtReCap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtReCap.Margin = new System.Windows.Forms.Padding(4);
             this.txtReCap.Name = "txtReCap";
             this.txtReCap.Size = new System.Drawing.Size(91, 22);
             this.txtReCap.TabIndex = 4;
@@ -179,7 +179,7 @@
             // btnReCap
             // 
             this.btnReCap.Location = new System.Drawing.Point(535, 188);
-            this.btnReCap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReCap.Margin = new System.Windows.Forms.Padding(4);
             this.btnReCap.Name = "btnReCap";
             this.btnReCap.Size = new System.Drawing.Size(41, 28);
             this.btnReCap.TabIndex = 3;
@@ -190,7 +190,7 @@
             // txtCapcha
             // 
             this.txtCapcha.Location = new System.Drawing.Point(295, 192);
-            this.txtCapcha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCapcha.Margin = new System.Windows.Forms.Padding(4);
             this.txtCapcha.Name = "txtCapcha";
             this.txtCapcha.ReadOnly = true;
             this.txtCapcha.Size = new System.Drawing.Size(231, 22);
@@ -220,7 +220,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký";

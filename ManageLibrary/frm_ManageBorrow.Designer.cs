@@ -231,10 +231,10 @@
             // tabTraSach
             // 
             this.tabTraSach.Controls.Add(this.grpTraSach);
-            this.tabTraSach.Location = new System.Drawing.Point(4, 28);
+            this.tabTraSach.Location = new System.Drawing.Point(4, 39);
             this.tabTraSach.Name = "tabTraSach";
             this.tabTraSach.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTraSach.Size = new System.Drawing.Size(1227, 768);
+            this.tabTraSach.Size = new System.Drawing.Size(1227, 757);
             this.tabTraSach.TabIndex = 0;
             this.tabTraSach.Text = "Quản lý trả sách";
             this.tabTraSach.UseVisualStyleBackColor = true;
@@ -271,7 +271,7 @@
             this.txtMaMuon.Name = "txtMaMuon";
             this.txtMaMuon.ReadOnly = true;
             this.txtMaMuon.Size = new System.Drawing.Size(205, 22);
-            this.txtMaMuon.TabIndex = 15;
+            this.txtMaMuon.TabIndex = 6;
             // 
             // label23
             // 
@@ -327,7 +327,7 @@
             this.txtMaSachTra.Name = "txtMaSachTra";
             this.txtMaSachTra.ReadOnly = true;
             this.txtMaSachTra.Size = new System.Drawing.Size(205, 22);
-            this.txtMaSachTra.TabIndex = 6;
+            this.txtMaSachTra.TabIndex = 5;
             // 
             // label5
             // 
@@ -344,7 +344,7 @@
             this.txtISBNTra.Name = "txtISBNTra";
             this.txtISBNTra.ReadOnly = true;
             this.txtISBNTra.Size = new System.Drawing.Size(205, 22);
-            this.txtISBNTra.TabIndex = 5;
+            this.txtISBNTra.TabIndex = 4;
             // 
             // label4
             // 
@@ -361,7 +361,7 @@
             this.txtTenSachTra.Name = "txtTenSachTra";
             this.txtTenSachTra.ReadOnly = true;
             this.txtTenSachTra.Size = new System.Drawing.Size(341, 22);
-            this.txtTenSachTra.TabIndex = 4;
+            this.txtTenSachTra.TabIndex = 3;
             // 
             // label3
             // 
@@ -395,14 +395,14 @@
             this.dgvDanhSachMuon.RowTemplate.Height = 24;
             this.dgvDanhSachMuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSachMuon.Size = new System.Drawing.Size(592, 482);
-            this.dgvDanhSachMuon.TabIndex = 3;
+            this.dgvDanhSachMuon.TabIndex = 2;
             // 
             // btnTimKiemDocGia
             // 
             this.btnTimKiemDocGia.Location = new System.Drawing.Point(418, 32);
             this.btnTimKiemDocGia.Name = "btnTimKiemDocGia";
             this.btnTimKiemDocGia.Size = new System.Drawing.Size(111, 40);
-            this.btnTimKiemDocGia.TabIndex = 2;
+            this.btnTimKiemDocGia.TabIndex = 1;
             this.btnTimKiemDocGia.Text = "Tìm kiếm";
             this.btnTimKiemDocGia.UseVisualStyleBackColor = true;
             this.btnTimKiemDocGia.Click += new System.EventHandler(this.btnTimKiemDocGia_Click);
@@ -412,7 +412,7 @@
             this.txtMaDocGia.Location = new System.Drawing.Point(188, 41);
             this.txtMaDocGia.Name = "txtMaDocGia";
             this.txtMaDocGia.Size = new System.Drawing.Size(180, 22);
-            this.txtMaDocGia.TabIndex = 1;
+            this.txtMaDocGia.TabIndex = 0;
             this.txtMaDocGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaDocGia_KeyPress);
             // 
             // label1

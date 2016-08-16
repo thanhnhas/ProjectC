@@ -131,7 +131,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1077, 677);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 1;
+            this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage2
@@ -159,7 +159,7 @@
             this.groupBox4.Location = new System.Drawing.Point(22, 313);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1024, 329);
-            this.groupBox4.TabIndex = 11;
+            this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Kho sách";
             // 
@@ -183,7 +183,7 @@
             this.btnCloseBook.Location = new System.Drawing.Point(812, 224);
             this.btnCloseBook.Name = "btnCloseBook";
             this.btnCloseBook.Size = new System.Drawing.Size(117, 50);
-            this.btnCloseBook.TabIndex = 10;
+            this.btnCloseBook.TabIndex = 5;
             this.btnCloseBook.Text = "Thoát";
             this.btnCloseBook.UseVisualStyleBackColor = true;
             this.btnCloseBook.Click += new System.EventHandler(this.btnCloseBook_Click);
@@ -193,7 +193,7 @@
             this.btnDeleteBook.Location = new System.Drawing.Point(635, 224);
             this.btnDeleteBook.Name = "btnDeleteBook";
             this.btnDeleteBook.Size = new System.Drawing.Size(117, 50);
-            this.btnDeleteBook.TabIndex = 9;
+            this.btnDeleteBook.TabIndex = 4;
             this.btnDeleteBook.Text = "Xóa";
             this.btnDeleteBook.UseVisualStyleBackColor = true;
             this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
@@ -203,7 +203,7 @@
             this.btnEditBook.Location = new System.Drawing.Point(457, 224);
             this.btnEditBook.Name = "btnEditBook";
             this.btnEditBook.Size = new System.Drawing.Size(117, 50);
-            this.btnEditBook.TabIndex = 8;
+            this.btnEditBook.TabIndex = 3;
             this.btnEditBook.Text = "Sửa";
             this.btnEditBook.UseVisualStyleBackColor = true;
             this.btnEditBook.Click += new System.EventHandler(this.btnEditBook_Click);
@@ -214,7 +214,7 @@
             this.btnSaveBook.Location = new System.Drawing.Point(290, 224);
             this.btnSaveBook.Name = "btnSaveBook";
             this.btnSaveBook.Size = new System.Drawing.Size(117, 50);
-            this.btnSaveBook.TabIndex = 7;
+            this.btnSaveBook.TabIndex = 2;
             this.btnSaveBook.Text = "Lưu";
             this.btnSaveBook.UseVisualStyleBackColor = true;
             this.btnSaveBook.Click += new System.EventHandler(this.btnSaveBook_Click);
@@ -226,7 +226,7 @@
             this.btnAddBook.Location = new System.Drawing.Point(120, 224);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(117, 50);
-            this.btnAddBook.TabIndex = 6;
+            this.btnAddBook.TabIndex = 1;
             this.btnAddBook.Text = "Thêm";
             this.btnAddBook.UseVisualStyleBackColor = false;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
@@ -248,7 +248,7 @@
             this.groupBox3.Location = new System.Drawing.Point(8, 15);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1040, 187);
-            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
             // 
@@ -258,7 +258,7 @@
             this.cbbPublisher.Location = new System.Drawing.Point(658, 80);
             this.cbbPublisher.Name = "cbbPublisher";
             this.cbbPublisher.Size = new System.Drawing.Size(303, 24);
-            this.cbbPublisher.TabIndex = 14;
+            this.cbbPublisher.TabIndex = 3;
             // 
             // cbbBookType
             // 
@@ -266,7 +266,7 @@
             this.cbbBookType.Location = new System.Drawing.Point(150, 133);
             this.cbbBookType.Name = "cbbBookType";
             this.cbbBookType.Size = new System.Drawing.Size(304, 24);
-            this.cbbBookType.TabIndex = 13;
+            this.cbbBookType.TabIndex = 4;
             // 
             // cbbAuthor
             // 
@@ -274,7 +274,7 @@
             this.cbbAuthor.Location = new System.Drawing.Point(658, 35);
             this.cbbAuthor.Name = "cbbAuthor";
             this.cbbAuthor.Size = new System.Drawing.Size(303, 24);
-            this.cbbAuthor.TabIndex = 12;
+            this.cbbAuthor.TabIndex = 1;
             // 
             // label7
             // 
@@ -299,7 +299,7 @@
             this.txtQuantity.Location = new System.Drawing.Point(658, 133);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(303, 22);
-            this.txtQuantity.TabIndex = 7;
+            this.txtQuantity.TabIndex = 5;
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
             // label5
@@ -316,7 +316,7 @@
             this.txtBookName.Location = new System.Drawing.Point(150, 87);
             this.txtBookName.Name = "txtBookName";
             this.txtBookName.Size = new System.Drawing.Size(304, 22);
-            this.txtBookName.TabIndex = 5;
+            this.txtBookName.TabIndex = 2;
             // 
             // label6
             // 
@@ -341,7 +341,7 @@
             this.txtBookISBN.Location = new System.Drawing.Point(150, 37);
             this.txtBookISBN.Name = "txtBookISBN";
             this.txtBookISBN.Size = new System.Drawing.Size(304, 22);
-            this.txtBookISBN.TabIndex = 1;
+            this.txtBookISBN.TabIndex = 0;
             // 
             // label4
             // 
