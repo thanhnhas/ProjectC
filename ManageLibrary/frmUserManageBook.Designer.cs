@@ -59,7 +59,6 @@
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrid.Size = new System.Drawing.Size(441, 413);
             this.dataGrid.TabIndex = 0;
-            this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
             // btnUpdate
             // 

@@ -67,19 +67,26 @@ namespace ManageLibrary
             txtName.Enabled = false;
             txtID.Enabled = false;
             txtToDate.Enabled = false;
-            dataGrid_CellClick(null, null);
+            txtID.DataBindings.Clear();
+            txtName.DataBindings.Clear();
+            lbUsername.DataBindings.Clear();
+            txtCode.DataBindings.Clear();
+            txtfrDate.DataBindings.Clear();
+            txtToDate.DataBindings.Clear();
+            txtStatus.DataBindings.Clear();
+            txtID.DataBindings.Add("Text", dtBorrow, "Mã HD");
+            txtName.DataBindings.Add("Text", dtBorrow, "Bookname");
+            lbUsername.DataBindings.Add("Text", dtBorrow, "username");
+            txtCode.DataBindings.Add("Text", dtBorrow, "ISBN");
+            txtfrDate.DataBindings.Add("Text", dtBorrow, "fromdate");
+            txtToDate.DataBindings.Add("Text", dtBorrow, "todate");
+            txtStatus.DataBindings.Add("Text", dtBorrow, "status");
+            if(dtBorrow.Rows.Count == 0)
+            {
+                btnUpdate.Enabled = false;
+            }
         }
 
-        private void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtID.Text = dataGrid.CurrentRow.Cells[0].Value.ToString();
-            txtName.Text = dataGrid.CurrentRow.Cells[1].Value.ToString();
-            lbUsername.Text = dataGrid.CurrentRow.Cells[2].Value.ToString();
-            txtCode.Text = dataGrid.CurrentRow.Cells[3].Value.ToString();
-            txtfrDate.Text = dataGrid.CurrentRow.Cells[4].Value.ToString();
-            txtToDate.Text = dataGrid.CurrentRow.Cells[5].Value.ToString();
-            txtStatus.Text = dataGrid.CurrentRow.Cells[6].Value.ToString();
-        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

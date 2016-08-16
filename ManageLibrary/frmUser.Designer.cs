@@ -108,10 +108,10 @@
             this.btnChangePass.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnChangePass.FlatAppearance.BorderSize = 0;
             this.btnChangePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnChangePass.Location = new System.Drawing.Point(235, 290);
+            this.btnChangePass.Location = new System.Drawing.Point(226, 290);
             this.btnChangePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChangePass.Name = "btnChangePass";
-            this.btnChangePass.Size = new System.Drawing.Size(160, 32);
+            this.btnChangePass.Size = new System.Drawing.Size(177, 32);
             this.btnChangePass.TabIndex = 5;
             this.btnChangePass.Text = "Thay đổi mật khẩu";
             this.btnChangePass.UseVisualStyleBackColor = false;
