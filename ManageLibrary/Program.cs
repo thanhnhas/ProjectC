@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -8,6 +9,14 @@ namespace ManageLibrary
 {
     static class Program
     {
+        private static void SplashScreen()
+        {
+            Application.Run(new frmLoadForm());
+        }
+        private static void SecondLogin()
+        {
+            Application.Run(new frmLogin());
+        }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,8 +25,14 @@ namespace ManageLibrary
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
-            //check index value ok ok
+            Thread t = new Thread(new ThreadStart(SplashScreen));
+            t.Start();
+            Thread.Sleep(3500);
+            //hàm này có tác dụng hủy
+            t.Abort();
+            t = new Thread(new ThreadStart(SecondLogin));
+            t.Start();
+          
 
         }
     }

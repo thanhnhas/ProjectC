@@ -20,7 +20,7 @@ namespace ManageLibrary
         private void timer1_Tick(object sender, EventArgs e)
         {
             // mỗi lần tăng 1 đơn vị
-            progressBar1.Increment(4);
+            progressBar1.Increment(2);
             // progressbar được lắp đầy
             if (progressBar1.Value == 100)
             {

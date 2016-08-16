@@ -68,8 +68,13 @@ namespace ManageLibrary
         }
 
         private void lbLogout_Click(object sender, EventArgs e)
-        {            
-            Application.Restart();
+        {
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Thoát",
+              MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                Application.Restart();
+            }
         }
     }
 }
