@@ -37,7 +37,6 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +86,7 @@
             // 
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnLogin.ImageKey = "(none)";
-            this.btnLogin.Location = new System.Drawing.Point(237, 177);
+            this.btnLogin.Location = new System.Drawing.Point(234, 189);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(149, 32);
             this.btnLogin.TabIndex = 3;
@@ -100,7 +99,7 @@
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnCancel.ImageKey = "(none)";
-            this.btnCancel.Location = new System.Drawing.Point(405, 177);
+            this.btnCancel.Location = new System.Drawing.Point(405, 189);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(149, 32);
             this.btnCancel.TabIndex = 4;
@@ -111,25 +110,14 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(305, 144);
+            this.label3.Location = new System.Drawing.Point(299, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.Size = new System.Drawing.Size(255, 17);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Đăng Ký";
+            this.label3.Text = "Bạn chưa có tài khoản ? Đăng kí ngay !";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
             this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(405, 144);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Quên Mật Khẩu";
-            this.label4.MouseEnter += new System.EventHandler(this.label4_MouseEnter);
-            this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             // 
             // frmLogin
             // 
@@ -138,7 +126,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(590, 246);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
@@ -168,7 +155,6 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
     }
 }
 
