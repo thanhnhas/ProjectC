@@ -19,7 +19,7 @@ namespace ManageLibrary
             radioButton1.Checked = true;
             label1.Visible = false;
         }
-
+        //bổ sung
         private void btnSearch_Click(object sender, EventArgs e)
         {
             BorrowDetailsData bdd = new BorrowDetailsData();
