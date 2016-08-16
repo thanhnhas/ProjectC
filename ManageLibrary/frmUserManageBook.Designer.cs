@@ -52,32 +52,33 @@
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(34, 30);
-            this.dataGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGrid.Location = new System.Drawing.Point(45, 37);
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(331, 291);
+            this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGrid.Size = new System.Drawing.Size(441, 413);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(138, 341);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdate.Location = new System.Drawing.Point(630, 433);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(83, 34);
-            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Size = new System.Drawing.Size(111, 42);
+            this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Gia Hạn";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(285, 341);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(781, 433);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(80, 34);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Size = new System.Drawing.Size(107, 42);
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Thoát";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -85,129 +86,144 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(392, 37);
+            this.label1.Location = new System.Drawing.Point(523, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Mã HĐ";
+            this.label1.Text = "Mã phiếu";
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(457, 30);
+            this.txtID.Location = new System.Drawing.Point(630, 46);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 4;
+            this.txtID.Size = new System.Drawing.Size(132, 22);
+            this.txtID.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(392, 79);
+            this.label2.Location = new System.Drawing.Point(523, 100);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Mã sách";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(392, 121);
+            this.label3.Location = new System.Drawing.Point(523, 152);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(67, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tên sách";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(392, 167);
+            this.label4.Location = new System.Drawing.Point(523, 211);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.Size = new System.Drawing.Size(80, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Ngày mượn";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(392, 215);
+            this.label5.Location = new System.Drawing.Point(523, 265);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.Size = new System.Drawing.Size(90, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Ngày hẹn trả";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(457, 76);
+            this.txtCode.Location = new System.Drawing.Point(630, 97);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(100, 20);
-            this.txtCode.TabIndex = 9;
+            this.txtCode.Size = new System.Drawing.Size(132, 22);
+            this.txtCode.TabIndex = 2;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(457, 114);
+            this.txtName.Location = new System.Drawing.Point(630, 149);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(173, 20);
-            this.txtName.TabIndex = 10;
+            this.txtName.Size = new System.Drawing.Size(229, 22);
+            this.txtName.TabIndex = 3;
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(457, 300);
+            this.txtStatus.Location = new System.Drawing.Point(630, 373);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(100, 20);
-            this.txtStatus.TabIndex = 13;
+            this.txtStatus.Size = new System.Drawing.Size(132, 22);
+            this.txtStatus.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(392, 307);
+            this.label6.Location = new System.Drawing.Point(526, 376);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 14;
             this.label6.Text = "Gia hạn";
             // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Location = new System.Drawing.Point(31, 352);
+            this.lbUsername.Location = new System.Drawing.Point(42, 433);
+            this.lbUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(55, 13);
+            this.lbUsername.Size = new System.Drawing.Size(0, 17);
             this.lbUsername.TabIndex = 15;
-            this.lbUsername.Text = "Username";
+            this.lbUsername.Visible = false;
             // 
             // txtfrDate
             // 
-            this.txtfrDate.Location = new System.Drawing.Point(457, 159);
+            this.txtfrDate.Location = new System.Drawing.Point(630, 206);
+            this.txtfrDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtfrDate.Name = "txtfrDate";
-            this.txtfrDate.Size = new System.Drawing.Size(173, 20);
-            this.txtfrDate.TabIndex = 16;
+            this.txtfrDate.Size = new System.Drawing.Size(229, 22);
+            this.txtfrDate.TabIndex = 4;
             // 
             // txtToDate
             // 
-            this.txtToDate.Location = new System.Drawing.Point(457, 209);
+            this.txtToDate.Location = new System.Drawing.Point(630, 260);
+            this.txtToDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtToDate.Name = "txtToDate";
-            this.txtToDate.Size = new System.Drawing.Size(173, 20);
-            this.txtToDate.TabIndex = 17;
+            this.txtToDate.Size = new System.Drawing.Size(229, 22);
+            this.txtToDate.TabIndex = 5;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(392, 269);
+            this.label7.Location = new System.Drawing.Point(526, 322);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 13);
+            this.label7.Size = new System.Drawing.Size(92, 17);
             this.label7.TabIndex = 18;
             this.label7.Text = "Ngày gia hạn";
             // 
             // txtGHan
             // 
-            this.txtGHan.Location = new System.Drawing.Point(457, 263);
+            this.txtGHan.Location = new System.Drawing.Point(630, 317);
+            this.txtGHan.Margin = new System.Windows.Forms.Padding(4);
             this.txtGHan.Name = "txtGHan";
-            this.txtGHan.Size = new System.Drawing.Size(173, 20);
-            this.txtGHan.TabIndex = 19;
+            this.txtGHan.Size = new System.Drawing.Size(229, 22);
+            this.txtGHan.TabIndex = 6;
             // 
             // frmUserManageBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 386);
+            this.ClientSize = new System.Drawing.Size(900, 484);
             this.Controls.Add(this.txtGHan);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtToDate);
@@ -226,8 +242,10 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dataGrid);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmUserManageBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Quản lý sách đã mượn";
             this.Load += new System.EventHandler(this.frmUserManageBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();

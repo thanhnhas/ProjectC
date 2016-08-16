@@ -44,64 +44,61 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 41);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(73, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên sách";
             // 
             // txtBookName
             // 
-            this.txtBookName.Location = new System.Drawing.Point(104, 41);
-            this.txtBookName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBookName.Location = new System.Drawing.Point(201, 47);
+            this.txtBookName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBookName.Name = "txtBookName";
-            this.txtBookName.Size = new System.Drawing.Size(335, 20);
+            this.txtBookName.Size = new System.Drawing.Size(445, 22);
             this.txtBookName.TabIndex = 1;
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(104, 88);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAuthor.Location = new System.Drawing.Point(201, 105);
+            this.txtAuthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(335, 20);
+            this.txtAuthor.Size = new System.Drawing.Size(445, 22);
             this.txtAuthor.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 88);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(73, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(55, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tác giả";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 169);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(73, 262);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Giới Thiệu";
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(104, 169);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescription.Location = new System.Drawing.Point(201, 205);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(335, 112);
+            this.txtDescription.Size = new System.Drawing.Size(445, 137);
             this.txtDescription.TabIndex = 5;
             this.txtDescription.Text = "";
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(151, 315);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInsert.Location = new System.Drawing.Point(339, 388);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(91, 38);
+            this.btnInsert.Size = new System.Drawing.Size(121, 47);
             this.btnInsert.TabIndex = 6;
             this.btnInsert.Text = "Đề xuất";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -109,48 +106,48 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(300, 315);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(525, 388);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 38);
+            this.button2.Size = new System.Drawing.Size(121, 47);
             this.button2.TabIndex = 7;
             this.button2.Text = "Thoát";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lbusername
             // 
             this.lbusername.AutoSize = true;
-            this.lbusername.Location = new System.Drawing.Point(39, 212);
+            this.lbusername.Location = new System.Drawing.Point(21, 462);
+            this.lbusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbusername.Name = "lbusername";
-            this.lbusername.Size = new System.Drawing.Size(61, 13);
+            this.lbusername.Size = new System.Drawing.Size(0, 17);
             this.lbusername.TabIndex = 8;
-            this.lbusername.Text = "lbusername";
             this.lbusername.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 132);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(73, 162);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(95, 17);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Năm NB";
+            this.label4.Text = "Năm xuất bản";
             // 
             // txtYear
             // 
-            this.txtYear.Location = new System.Drawing.Point(104, 129);
-            this.txtYear.Margin = new System.Windows.Forms.Padding(2);
+            this.txtYear.Location = new System.Drawing.Point(201, 157);
+            this.txtYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(128, 20);
+            this.txtYear.Size = new System.Drawing.Size(169, 22);
             this.txtYear.TabIndex = 10;
             this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
             // 
             // frmNewBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 405);
+            this.ClientSize = new System.Drawing.Size(784, 498);
             this.Controls.Add(this.txtYear);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbusername);
@@ -162,8 +159,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBookName);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmNewBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đề xuất sách mới";
             this.ResumeLayout(false);
             this.PerformLayout();

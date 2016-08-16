@@ -64,6 +64,7 @@ namespace ManageLibrary
                 if (udt.updatePassword(u))
                 {
                     MessageBox.Show("Cập nhật mật khẩu thành công");
+                    this.Close();
                 }
                 else
                 {
@@ -74,10 +75,9 @@ namespace ManageLibrary
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thoát",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (result == DialogResult.OK)
                 this.Close();
         }
+
+        
     }
 }

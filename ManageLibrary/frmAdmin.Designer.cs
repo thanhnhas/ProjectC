@@ -48,7 +48,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnExit.Location = new System.Drawing.Point(1027, 613);
+            this.btnExit.Location = new System.Drawing.Point(1027, 675);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(121, 49);
@@ -63,11 +63,11 @@
             this.btnBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBook.FlatAppearance.BorderSize = 0;
             this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBook.Location = new System.Drawing.Point(580, 422);
+            this.btnBook.Location = new System.Drawing.Point(580, 492);
             this.btnBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBook.Name = "btnBook";
             this.btnBook.Size = new System.Drawing.Size(375, 169);
-            this.btnBook.TabIndex = 7;
+            this.btnBook.TabIndex = 3;
             this.btnBook.UseVisualStyleBackColor = true;
             this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
@@ -80,7 +80,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ManageLibrary.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(199, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(199, 77);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(756, 225);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -93,11 +93,11 @@
             this.btnBorrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBorrow.FlatAppearance.BorderSize = 0;
             this.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBorrow.Location = new System.Drawing.Point(199, 422);
+            this.btnBorrow.Location = new System.Drawing.Point(199, 492);
             this.btnBorrow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBorrow.Name = "btnBorrow";
             this.btnBorrow.Size = new System.Drawing.Size(375, 169);
-            this.btnBorrow.TabIndex = 6;
+            this.btnBorrow.TabIndex = 2;
             this.btnBorrow.UseVisualStyleBackColor = true;
             this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
@@ -107,11 +107,11 @@
             this.btnAuthor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAuthor.FlatAppearance.BorderSize = 0;
             this.btnAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAuthor.Location = new System.Drawing.Point(580, 249);
+            this.btnAuthor.Location = new System.Drawing.Point(580, 319);
             this.btnAuthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAuthor.Name = "btnAuthor";
             this.btnAuthor.Size = new System.Drawing.Size(375, 169);
-            this.btnAuthor.TabIndex = 5;
+            this.btnAuthor.TabIndex = 1;
             this.btnAuthor.UseVisualStyleBackColor = true;
             this.btnAuthor.Click += new System.EventHandler(this.btnAuthor_Click);
             // 
@@ -121,11 +121,11 @@
             this.btnUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUsers.FlatAppearance.BorderSize = 0;
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUsers.Location = new System.Drawing.Point(199, 249);
+            this.btnUsers.Location = new System.Drawing.Point(199, 319);
             this.btnUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(375, 169);
-            this.btnUsers.TabIndex = 2;
+            this.btnUsers.TabIndex = 0;
             this.btnUsers.UseVisualStyleBackColor = true;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
@@ -159,7 +159,7 @@
             this.lbLogout.Location = new System.Drawing.Point(1065, 40);
             this.lbLogout.Name = "lbLogout";
             this.lbLogout.Size = new System.Drawing.Size(81, 17);
-            this.lbLogout.TabIndex = 12;
+            this.lbLogout.TabIndex = 5;
             this.lbLogout.Text = "Đăng xuất";
             this.lbLogout.Click += new System.EventHandler(this.lbLogout_Click);
             this.lbLogout.MouseLeave += new System.EventHandler(this.lbLogout_MouseLeave);
@@ -170,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(1160, 673);
+            this.ClientSize = new System.Drawing.Size(1160, 735);
             this.Controls.Add(this.lbLogout);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.label1);

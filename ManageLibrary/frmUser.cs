@@ -36,11 +36,6 @@ namespace ManageLibrary
             txtAddress.DataBindings.Add("Text", dtUser, "Address");
             txtPhone.DataBindings.Add("Text", dtUser, "Phone Number");
             txtFullName.DataBindings.Add("Text", dtUser, "Full Name");
-            txtPhone.Enabled = false;
-            txtPassword.Enabled = false;
-            txtAddress.Enabled = false;
-            txtFullName.Enabled = false;
-            txtUsernme.Enabled = false;
         }
         public void frmUser_Load(object sender, EventArgs e)
         {
@@ -65,10 +60,7 @@ namespace ManageLibrary
             suggest.ShowDialog();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            loadData();
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -76,10 +68,22 @@ namespace ManageLibrary
             mnb.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+     
+
+        private void frmUser_Activated(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Thoát",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+               MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (result == DialogResult.OK)
             {
                 Application.Restart();

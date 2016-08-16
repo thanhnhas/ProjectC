@@ -53,6 +53,7 @@ namespace ManageLibrary
                 if (flag == true)
                 {
                     MessageBox.Show("Cập nhật thông tin thành công.");
+                    this.Close();
                 }
                 else
                 {
@@ -63,9 +64,6 @@ namespace ManageLibrary
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thoát",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (result == DialogResult.OK)
                 this.Close();
         }
 

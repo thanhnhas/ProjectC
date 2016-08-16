@@ -34,6 +34,11 @@ namespace ManageLibrary
                 MessageBox.Show("Bạn không được gia hạn thêm quá 10 ngày");
                 txtGHan.Focus();
             }
+             else if(ngay <= 0)
+            {
+                MessageBox.Show("Ngày gia hạn không hợp lệ");
+                txtGHan.Focus();
+            }
             else 
             {
                 b.username = lbUsername.Text;
@@ -42,6 +47,7 @@ namespace ManageLibrary
                 if (flag == true)
                 {
                     MessageBox.Show("Gia hạn thành công.");
+                    frmUserManageBook_Load(null, null);
                 }
                 else
                 {
@@ -61,6 +67,7 @@ namespace ManageLibrary
             txtName.Enabled = false;
             txtID.Enabled = false;
             txtToDate.Enabled = false;
+            dataGrid_CellClick(null, null);
         }
 
         private void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -76,10 +83,9 @@ namespace ManageLibrary
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thoát",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (result == DialogResult.OK)
                 this.Close();
         }
+
+       
     }
 }

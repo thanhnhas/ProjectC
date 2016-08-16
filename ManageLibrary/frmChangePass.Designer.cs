@@ -42,9 +42,10 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(65, 123);
+            this.btnOK.Location = new System.Drawing.Point(184, 151);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(100, 41);
             this.btnOK.TabIndex = 4;
             this.btnOK.Text = "Xác nhận";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -53,59 +54,66 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 16);
+            this.label1.Location = new System.Drawing.Point(52, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mật khẩu cũ";
             // 
             // txtPassOld
             // 
-            this.txtPassOld.Location = new System.Drawing.Point(146, 13);
+            this.txtPassOld.Location = new System.Drawing.Point(184, 17);
+            this.txtPassOld.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassOld.Name = "txtPassOld";
             this.txtPassOld.PasswordChar = '*';
-            this.txtPassOld.Size = new System.Drawing.Size(150, 20);
+            this.txtPassOld.Size = new System.Drawing.Size(233, 22);
             this.txtPassOld.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 50);
+            this.label2.Location = new System.Drawing.Point(52, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu mới";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 88);
+            this.label3.Location = new System.Drawing.Point(52, 109);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(122, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Nhập lại mật khẩu";
             // 
             // txtPassNew
             // 
-            this.txtPassNew.Location = new System.Drawing.Point(146, 47);
+            this.txtPassNew.Location = new System.Drawing.Point(184, 59);
+            this.txtPassNew.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassNew.Name = "txtPassNew";
             this.txtPassNew.PasswordChar = '*';
-            this.txtPassNew.Size = new System.Drawing.Size(150, 20);
+            this.txtPassNew.Size = new System.Drawing.Size(233, 22);
             this.txtPassNew.TabIndex = 2;
             // 
             // txtPassConfirm
             // 
-            this.txtPassConfirm.Location = new System.Drawing.Point(146, 85);
+            this.txtPassConfirm.Location = new System.Drawing.Point(184, 106);
+            this.txtPassConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassConfirm.Name = "txtPassConfirm";
             this.txtPassConfirm.PasswordChar = '*';
-            this.txtPassConfirm.Size = new System.Drawing.Size(150, 20);
+            this.txtPassConfirm.Size = new System.Drawing.Size(233, 22);
             this.txtPassConfirm.TabIndex = 3;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(203, 123);
+            this.btnCancel.Location = new System.Drawing.Point(317, 151);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(100, 40);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -114,28 +122,30 @@
             // lbusername
             // 
             this.lbusername.AutoSize = true;
-            this.lbusername.Location = new System.Drawing.Point(146, 123);
+            this.lbusername.Location = new System.Drawing.Point(436, 135);
+            this.lbusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbusername.Name = "lbusername";
-            this.lbusername.Size = new System.Drawing.Size(35, 13);
+            this.lbusername.Size = new System.Drawing.Size(0, 17);
             this.lbusername.TabIndex = 0;
-            this.lbusername.Text = "label4";
             this.lbusername.Visible = false;
             // 
             // lbpassword
             // 
             this.lbpassword.AutoSize = true;
-            this.lbpassword.Location = new System.Drawing.Point(146, 144);
+            this.lbpassword.Location = new System.Drawing.Point(436, 162);
+            this.lbpassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbpassword.Name = "lbpassword";
-            this.lbpassword.Size = new System.Drawing.Size(35, 13);
+            this.lbpassword.Size = new System.Drawing.Size(0, 17);
             this.lbpassword.TabIndex = 6;
-            this.lbpassword.Text = "label4";
             this.lbpassword.Visible = false;
             // 
             // frmChangePass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnOK;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 166);
+            this.CancelButton = this.btnCancel;
+            this.ClientSize = new System.Drawing.Size(495, 220);
             this.Controls.Add(this.lbpassword);
             this.Controls.Add(this.lbusername);
             this.Controls.Add(this.btnCancel);
@@ -146,7 +156,10 @@
             this.Controls.Add(this.txtPassOld);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOK);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmChangePass";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đổi mật khẩu";
             this.Load += new System.EventHandler(this.frmChangePass_Load);
             this.ResumeLayout(false);
