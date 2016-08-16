@@ -12,6 +12,7 @@ namespace Business_Tier.DataAccess
 {
     public class UserRegisDB
     {
+        //ham dung de them 1 user
         public bool addNewUser(UserRegisEn b)
         {
 
@@ -29,6 +30,7 @@ namespace Business_Tier.DataAccess
                 throw new Exception(se.Message);
             }
         }
+        //ham dung de kiem tra ten tai khoan da ton tai hay khong
         public DataSet getUsertoCheck(UserRegisEn a)
         {
             string SQL =

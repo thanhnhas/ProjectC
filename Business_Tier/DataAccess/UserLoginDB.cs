@@ -14,13 +14,8 @@ namespace Business_Tier.DataAccess
     {
 
         //-----------------------//
-        public bool IsEmpty(DataSet dataSet)
-        {
-            foreach (DataTable table in dataSet.Tables)
-                if (table.Rows.Count != 0) return false;
 
-            return true;
-        }
+        //ham dung de kiem tra role cua 1 user khi dang nhap
         public DataSet checkRole(UserLoginEn a)
         {
             string SQL =
@@ -37,10 +32,11 @@ namespace Business_Tier.DataAccess
             }
             return dts;
         }
-    public DataSet getUsertoLogin(UserLoginEn a)
+        //ham dung de lay du lieu cua nguoi dung
+        public DataSet getUsertoLogin(UserLoginEn a)
         {
             string SQL =
-                "select * from tblUser where username = '"+a.Username+ "' and password='" + a.Password + "'";
+                "select * from tblUser where username = '" + a.Username + "' and password='" + a.Password + "'";
             DataSet dts = new DataSet();
             try
             {
