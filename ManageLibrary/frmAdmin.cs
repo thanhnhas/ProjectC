@@ -24,7 +24,13 @@ namespace ManageLibrary
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn thoát khỏi chương trình?", "Thoát",
+              MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            
         }
 
         private void btnUsers_Click(object sender, EventArgs e)

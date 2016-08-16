@@ -97,13 +97,11 @@ namespace ManageLibrary
         private void label4_MouseEnter(object sender, EventArgs e)
         {
             // Set the border to a three-dimensional border.
-            label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
         }
 
         private void label4_MouseLeave(object sender, EventArgs e)
         {
             // Set the border to a three-dimensional border.
-            label4.BorderStyle = System.Windows.Forms.BorderStyle.None;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
