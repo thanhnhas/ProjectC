@@ -255,7 +255,48 @@ namespace ManageLibrary
             txtPublisherAddress.Clear();
         }
 
+
+        /*------------------- HANDLE NUMBER ----------------*/
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPublisherPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         /*------------------------- PUBLISHER MANAGEMENT -----------------------*/
+        //VALIDATE DATA
+        bool validPublisher(Publisher p)
+        {
+            if (p.ID.Length <= 2 && p.ID.Length >= 6)
+            {
+                MessageBox.Show("ID phải có độ dài từ 2 -> 6 kí tự", "ID Format",
+                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            if (p.Name.Length > 30)
+            {
+                MessageBox.Show("Tên không được vượt quá 30 kí tự", "Name Format",
+                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            if (p.Phone.Length < 8 && p.Phone.Length > 11)
+            {
+                MessageBox.Show("Số điện thoại phải có từ 8 -> 11 số", "Phone Number Format",
+                            MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return false;
+            }
+            return true;
+        }
         //CLEAR TEXTBOX AND SET TEXTBOX IS EDITABE -> SET SAVE STATE: ADD NEW
         private void btnAddPublisher_Click(object sender, EventArgs e)
         {
@@ -274,6 +315,7 @@ namespace ManageLibrary
             String Address = txtPublisherAddress.Text;
             String Phone = txtPublisherPhone.Text;
             Publisher p = new Publisher { ID = ID , Name = Name , Address = Address , Phone = Phone};
+            if (!validPublisher(p)) return;
             if (IsPublisherAddNew)
             {
                 try
@@ -474,6 +516,8 @@ namespace ManageLibrary
             }
             
         }
+       
+
         //SET TEXTBOX IS EDITABLE -> SET SAVE STATE: UPDATE
         private void btnEditBookType_Click(object sender, EventArgs e)
         {
@@ -525,7 +569,7 @@ namespace ManageLibrary
         {
             this.Close();
         }
-
+        
 
         /*------------------------- BOOK MANAGEMENT -----------------------*/
         //CLEAR TEXTBOX AND SET TEXTBOX IS EDITABE -> SET SAVE STATE: ADD NEW

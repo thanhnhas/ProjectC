@@ -300,6 +300,7 @@
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(303, 22);
             this.txtQuantity.TabIndex = 7;
+            this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
             // label5
             // 
@@ -604,6 +605,7 @@
             this.txtPublisherPhone.Name = "txtPublisherPhone";
             this.txtPublisherPhone.Size = new System.Drawing.Size(334, 22);
             this.txtPublisherPhone.TabIndex = 11;
+            this.txtPublisherPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPublisherPhone_KeyPress);
             // 
             // label11
             // 

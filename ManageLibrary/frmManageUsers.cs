@@ -109,6 +109,7 @@ namespace ManageLibrary
                 rdtUser.Checked = false;
             }
             dgwUser.DataSource = bsUser;
+            dgwUser.Columns.Remove("password");
         }
 
         private void btnUserAdd_Click(object sender, EventArgs e)
