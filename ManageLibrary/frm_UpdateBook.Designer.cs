@@ -80,6 +80,25 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtPublisherID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnSuggestExit = new System.Windows.Forms.Button();
+            this.btnSuggestAccept = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txtSuggestStatus = new System.Windows.Forms.TextBox();
+            this.txtSuggestDescription = new System.Windows.Forms.RichTextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtSuggestYear = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtSuggestAuthorName = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtSuggestBook = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtSuggestUsername = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtSuggestID = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dgvSuggestList = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -93,6 +112,10 @@
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPublisher)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSuggestList)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -101,6 +124,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.ItemSize = new System.Drawing.Size(150, 50);
             this.tabControl1.Location = new System.Drawing.Point(-3, 0);
             this.tabControl1.Name = "tabControl1";
@@ -108,6 +132,7 @@
             this.tabControl1.Size = new System.Drawing.Size(1077, 677);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 1;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -144,13 +169,13 @@
             this.dgvBook.AllowUserToDeleteRows = false;
             this.dgvBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBook.Location = new System.Drawing.Point(12, 21);
+            this.dgvBook.Location = new System.Drawing.Point(10, 21);
             this.dgvBook.MultiSelect = false;
             this.dgvBook.Name = "dgvBook";
             this.dgvBook.ReadOnly = true;
             this.dgvBook.RowTemplate.Height = 24;
             this.dgvBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBook.Size = new System.Drawing.Size(1014, 302);
+            this.dgvBook.Size = new System.Drawing.Size(1014, 277);
             this.dgvBook.TabIndex = 0;
             // 
             // btnCloseBook
@@ -359,13 +384,13 @@
             this.dgvBookType.AllowUserToDeleteRows = false;
             this.dgvBookType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBookType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBookType.Location = new System.Drawing.Point(6, 21);
+            this.dgvBookType.Location = new System.Drawing.Point(6, 20);
             this.dgvBookType.MultiSelect = false;
             this.dgvBookType.Name = "dgvBookType";
             this.dgvBookType.ReadOnly = true;
             this.dgvBookType.RowTemplate.Height = 24;
             this.dgvBookType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBookType.Size = new System.Drawing.Size(1014, 331);
+            this.dgvBookType.Size = new System.Drawing.Size(1014, 309);
             this.dgvBookType.TabIndex = 0;
             // 
             // btnCloseBookType
@@ -496,13 +521,13 @@
             this.dgvPublisher.AllowUserToDeleteRows = false;
             this.dgvPublisher.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPublisher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPublisher.Location = new System.Drawing.Point(6, 21);
+            this.dgvPublisher.Location = new System.Drawing.Point(6, 28);
             this.dgvPublisher.MultiSelect = false;
             this.dgvPublisher.Name = "dgvPublisher";
             this.dgvPublisher.ReadOnly = true;
             this.dgvPublisher.RowTemplate.Height = 24;
             this.dgvPublisher.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPublisher.Size = new System.Drawing.Size(1036, 305);
+            this.dgvPublisher.Size = new System.Drawing.Size(1036, 288);
             this.dgvPublisher.TabIndex = 0;
             // 
             // btnClosePublisher
@@ -637,6 +662,193 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Mã NXB";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.btnSuggestExit);
+            this.tabPage4.Controls.Add(this.btnSuggestAccept);
+            this.tabPage4.Controls.Add(this.groupBox8);
+            this.tabPage4.Controls.Add(this.groupBox7);
+            this.tabPage4.Location = new System.Drawing.Point(4, 54);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1069, 619);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Quản lý đề xuất";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // btnSuggestExit
+            // 
+            this.btnSuggestExit.Location = new System.Drawing.Point(864, 518);
+            this.btnSuggestExit.Name = "btnSuggestExit";
+            this.btnSuggestExit.Size = new System.Drawing.Size(116, 57);
+            this.btnSuggestExit.TabIndex = 3;
+            this.btnSuggestExit.Text = "Thoát";
+            this.btnSuggestExit.UseVisualStyleBackColor = true;
+            this.btnSuggestExit.Click += new System.EventHandler(this.btnSuggestExit_Click);
+            // 
+            // btnSuggestAccept
+            // 
+            this.btnSuggestAccept.Location = new System.Drawing.Point(716, 518);
+            this.btnSuggestAccept.Name = "btnSuggestAccept";
+            this.btnSuggestAccept.Size = new System.Drawing.Size(116, 57);
+            this.btnSuggestAccept.TabIndex = 2;
+            this.btnSuggestAccept.Text = "Duyệt";
+            this.btnSuggestAccept.UseVisualStyleBackColor = true;
+            this.btnSuggestAccept.Click += new System.EventHandler(this.btnSuggestAccept_Click);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.txtSuggestStatus);
+            this.groupBox8.Controls.Add(this.txtSuggestDescription);
+            this.groupBox8.Controls.Add(this.label18);
+            this.groupBox8.Controls.Add(this.txtSuggestYear);
+            this.groupBox8.Controls.Add(this.label17);
+            this.groupBox8.Controls.Add(this.txtSuggestAuthorName);
+            this.groupBox8.Controls.Add(this.label16);
+            this.groupBox8.Controls.Add(this.txtSuggestBook);
+            this.groupBox8.Controls.Add(this.label15);
+            this.groupBox8.Controls.Add(this.txtSuggestUsername);
+            this.groupBox8.Controls.Add(this.label14);
+            this.groupBox8.Controls.Add(this.txtSuggestID);
+            this.groupBox8.Controls.Add(this.label13);
+            this.groupBox8.Location = new System.Drawing.Point(583, 21);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(456, 459);
+            this.groupBox8.TabIndex = 1;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Thông tin đề xuất";
+            // 
+            // txtSuggestStatus
+            // 
+            this.txtSuggestStatus.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtSuggestStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSuggestStatus.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtSuggestStatus.Location = new System.Drawing.Point(148, 420);
+            this.txtSuggestStatus.Name = "txtSuggestStatus";
+            this.txtSuggestStatus.Size = new System.Drawing.Size(101, 22);
+            this.txtSuggestStatus.TabIndex = 13;
+            // 
+            // txtSuggestDescription
+            // 
+            this.txtSuggestDescription.Location = new System.Drawing.Point(148, 237);
+            this.txtSuggestDescription.Name = "txtSuggestDescription";
+            this.txtSuggestDescription.Size = new System.Drawing.Size(270, 163);
+            this.txtSuggestDescription.TabIndex = 11;
+            this.txtSuggestDescription.Text = "";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(30, 289);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(43, 17);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "Mô tả";
+            // 
+            // txtSuggestYear
+            // 
+            this.txtSuggestYear.Location = new System.Drawing.Point(148, 197);
+            this.txtSuggestYear.Name = "txtSuggestYear";
+            this.txtSuggestYear.Size = new System.Drawing.Size(270, 22);
+            this.txtSuggestYear.TabIndex = 9;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(30, 197);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(95, 17);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "Năm xuất bản";
+            // 
+            // txtSuggestAuthorName
+            // 
+            this.txtSuggestAuthorName.Location = new System.Drawing.Point(148, 153);
+            this.txtSuggestAuthorName.Name = "txtSuggestAuthorName";
+            this.txtSuggestAuthorName.Size = new System.Drawing.Size(270, 22);
+            this.txtSuggestAuthorName.TabIndex = 7;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(30, 153);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(62, 17);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Tác Giả ";
+            // 
+            // txtSuggestBook
+            // 
+            this.txtSuggestBook.Location = new System.Drawing.Point(148, 110);
+            this.txtSuggestBook.Name = "txtSuggestBook";
+            this.txtSuggestBook.Size = new System.Drawing.Size(270, 22);
+            this.txtSuggestBook.TabIndex = 5;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(30, 110);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(67, 17);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Tên sách";
+            // 
+            // txtSuggestUsername
+            // 
+            this.txtSuggestUsername.Location = new System.Drawing.Point(148, 68);
+            this.txtSuggestUsername.Name = "txtSuggestUsername";
+            this.txtSuggestUsername.Size = new System.Drawing.Size(270, 22);
+            this.txtSuggestUsername.TabIndex = 3;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(30, 68);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 17);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Tên độc giả";
+            // 
+            // txtSuggestID
+            // 
+            this.txtSuggestID.Location = new System.Drawing.Point(148, 30);
+            this.txtSuggestID.Name = "txtSuggestID";
+            this.txtSuggestID.Size = new System.Drawing.Size(157, 22);
+            this.txtSuggestID.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(30, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(21, 17);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "ID";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.dgvSuggestList);
+            this.groupBox7.Location = new System.Drawing.Point(20, 21);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(557, 560);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Danh sách đề xuất";
+            // 
+            // dgvSuggestList
+            // 
+            this.dgvSuggestList.AllowUserToAddRows = false;
+            this.dgvSuggestList.AllowUserToDeleteRows = false;
+            this.dgvSuggestList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSuggestList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSuggestList.Location = new System.Drawing.Point(16, 30);
+            this.dgvSuggestList.Name = "dgvSuggestList";
+            this.dgvSuggestList.ReadOnly = true;
+            this.dgvSuggestList.RowHeadersVisible = false;
+            this.dgvSuggestList.RowTemplate.Height = 24;
+            this.dgvSuggestList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSuggestList.Size = new System.Drawing.Size(523, 524);
+            this.dgvSuggestList.TabIndex = 0;
+            // 
             // frm_UpdateBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -665,6 +877,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPublisher)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSuggestList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -722,5 +939,24 @@
         private System.Windows.Forms.Button btnClosePublisher;
         private System.Windows.Forms.Button btnDeletePublisher;
         private System.Windows.Forms.Button btnEditPublisher;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox txtSuggestYear;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtSuggestAuthorName;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtSuggestBook;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtSuggestUsername;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtSuggestID;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.DataGridView dgvSuggestList;
+        private System.Windows.Forms.RichTextBox txtSuggestDescription;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtSuggestStatus;
+        private System.Windows.Forms.Button btnSuggestExit;
+        private System.Windows.Forms.Button btnSuggestAccept;
     }
 }

@@ -19,7 +19,8 @@ namespace ManageLibrary
             InitializeComponent();
         }
         BookData bd = new BookData();
-        DataTable BookDTB,BookTypeDTB, PublisherDTB, AuthorDTB;
+        NewBookStore nb = new NewBookStore();
+        DataTable BookDTB,BookTypeDTB, PublisherDTB, AuthorDTB, SuggestDTB;
         List<String> DTcbbBookTypeName, DTcbbBookTypeID ,
              DTcbbAuthorName, DTcbbAuthorID, DTcbbPublisherName, DTcbbPublisherID;
         bool IsBookAddNew = false, IsBookTypeAddNew = false, IsPublisherAddNew = false;
@@ -31,10 +32,13 @@ namespace ManageLibrary
             BookTypeDTB = bd.GetBookTypeTable().Tables[0];
             PublisherDTB = bd.GetPublisherTable().Tables[0];
             AuthorDTB = bd.GetAuthorTable().Tables[0];
+            SuggestDTB = nb.GetSuggestTable().Tables[0];
             //SET DATASOURCE TO DATAGRIDVIEW
             dgvBook.DataSource = BookDTB;
             dgvBookType.DataSource = BookTypeDTB;
             dgvPublisher.DataSource = PublisherDTB;
+            dgvSuggestList.DataSource = SuggestDTB;
+            dgvSuggestColumnsDelete();
             //COMBOBOX DATA
             GetSourceCbb();
 
@@ -43,11 +47,13 @@ namespace ManageLibrary
             TXTBookDataBindings();
             TXTBookTypeDataBindings();
             TXTPublisherDataBindings();
+            TXTSuggestDataBindings();
 
             //SET TEXTBOX IS READONLY
             TXTBookSetReadOnly();
             TXTBookTypeSetReadOnly();
-            TXTPublisherSetReadOnly();        
+            TXTPublisherSetReadOnly();
+            TXTSuggestSetReadOnly();        
 
         }
         //GET SOURCE FOR COMBOBOX
@@ -125,6 +131,47 @@ namespace ManageLibrary
             txtPublisherName.DataBindings.Add("Text", PublisherDTB, "Nhà xuất bản");
             txtPublisherPhone.DataBindings.Add("Text", PublisherDTB, "Số điện thoại");
             txtPublisherAddress.DataBindings.Add("Text", PublisherDTB, "Địa chỉ");
+        }
+
+        //DATABINDING TEXTBOX [SUGGEST]
+        void TXTSuggestDataBindings()
+        {
+            txtSuggestID.DataBindings.Clear();
+            txtSuggestUsername.DataBindings.Clear();
+            txtSuggestBook.DataBindings.Clear();
+            txtSuggestAuthorName.DataBindings.Clear();
+            txtSuggestYear.DataBindings.Clear();
+            txtSuggestDescription.DataBindings.Clear();
+            txtSuggestStatus.DataBindings.Clear();
+
+            txtSuggestID.DataBindings.Add("Text", SuggestDTB, "ID");
+            txtSuggestUsername.DataBindings.Add("Text", SuggestDTB, "username");
+            txtSuggestBook.DataBindings.Add("Text", SuggestDTB, "BookName");
+            txtSuggestAuthorName.DataBindings.Add("Text", SuggestDTB, "Author");
+            txtSuggestYear.DataBindings.Add("Text", SuggestDTB, "Year");
+            txtSuggestDescription.DataBindings.Add("Text", SuggestDTB, "Description");
+            txtSuggestStatus.DataBindings.Add("Text", SuggestDTB, "status");
+        }
+
+        //DELETE COLUMNS [SUGGEST]
+        void dgvSuggestColumnsDelete()
+        {
+            dgvSuggestList.Columns.Remove("ID");
+            dgvSuggestList.Columns.Remove("status");
+            dgvSuggestList.Columns.Remove("Description");
+        }
+
+        //READONLY TEXTBOX [SUGGEST]
+        void TXTSuggestSetReadOnly()
+        {
+            txtSuggestAuthorName.ReadOnly = true;
+            txtSuggestBook.ReadOnly = true;
+            txtSuggestDescription.ReadOnly = true;
+            txtSuggestID.ReadOnly = true;
+            txtSuggestStatus.ReadOnly = true;
+            txtSuggestUsername.ReadOnly = true;
+            txtSuggestYear.ReadOnly = true;
+            
         }
 
         //READONLY TEXTBOX [BOOK]
@@ -340,11 +387,16 @@ namespace ManageLibrary
             }
             
         }
+
+        
+
         //CLOSE FORM
         private void btnClosePublisher_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
 
         /*------------------------- BOOK TYPE MANAGEMENT -----------------------*/
         //CLEAR TEXTBOX AND SET TEXTBOX IS EDITABE -> SET SAVE STATE: ADD NEW
@@ -357,6 +409,8 @@ namespace ManageLibrary
             btnEditBookType.Enabled = false;
             btnDeleteBookType.Enabled = false;
         }
+
+
         //SAVE DATA FROM TEXTBOX TO DATABASE
         private void btnSaveBookType_Click(object sender, EventArgs e)
         {
@@ -613,7 +667,7 @@ namespace ManageLibrary
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa sách này, Sách đang cho mượn ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -622,6 +676,53 @@ namespace ManageLibrary
         {
             this.Close();
 
+        }
+
+
+        /*------------------- SUGGEST MANAGEMENT ---------------------*/
+
+        //ACCEPT SUGGEST REQUEST
+        private void btnSuggestAccept_Click(object sender, EventArgs e)
+        {
+            String ID = txtSuggestID.Text;
+            bool isAccepted = bool.Parse(txtSuggestStatus.Text);
+            if (isAccepted)
+            {
+                MessageBox.Show("Đề xuất này đã được duyệt :)", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
+                bool flag = nb.AcceptSuggest(ID);
+                if (flag)
+                {
+                    MessageBox.Show("Đã duyệt đề xuất thành công", "Thành công",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frm_UpdateBook_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Duyệt đề xuất thất bại do gặp lỗi, vui lòng thử lại", "Thất bại",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cơ sở dữ liệu lỗi, vui lòng thử lại", "Thất bại",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            
+        }
+        // CLOSE FORM
+        private void btnSuggestExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //RELOAD FORM
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            frm_UpdateBook_Load(null, null);
         }
     }
 }

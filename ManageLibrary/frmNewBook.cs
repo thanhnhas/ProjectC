@@ -51,7 +51,7 @@ namespace ManageLibrary
                 nb.author = txtAuthor.Text;
                 nb.description = txtDescription.Text;
                 nb.year = txtYear.Text;
-                nb.status = true;
+                nb.status = false;
                 if (bdt.addNewSuggest(nb))
                 {
                     MessageBox.Show("Lời đề nghị đã được gửi");

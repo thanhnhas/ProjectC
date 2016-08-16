@@ -16,7 +16,7 @@ namespace Business_Tier.DataAccess
         {
 
             string SQL =
-                "Insert tblUser values(@ID,@PWD,2,'','','',0,2)";
+                "Insert tblUser values(@ID,@PWD,2,'','','',0)";
             SqlParameter id = new SqlParameter("@ID", b.ID);
             SqlParameter pwd = new SqlParameter("@PWD", b.PWD);
             

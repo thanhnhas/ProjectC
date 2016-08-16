@@ -17,7 +17,7 @@ namespace Business_Tier.DataAccess
         //-----------------------------------------------------------------
         public DataSet GetUserByDataSet()
         {
-            string SQL = "select u.username as 'Username' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count',s.name as 'Status' from tblUser u, tblType t,tblStatus s where u.type = t.type and s.statusID=u.status";
+            string SQL = "select u.username as 'Username', u.password as 'Password'  , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count' from tblUser u, tblType t where u.type = t.type";
             DataSet dsUser = new DataSet();
             try
             {
@@ -33,7 +33,7 @@ namespace Business_Tier.DataAccess
         //--------------------------------------------------------------------
         public DataSet GetUserByUsername(string username)
         {
-            string SQL = "select u.username as 'Username' , u.password as 'Password' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count',s.name as 'Status' from tblUser u, tblType t,tblStatus s where u.type = t.type and s.statusID=u.status and username='"+username+"'";
+            string SQL = "select u.username as 'Username' , u.password as 'Password' , u.name as 'Full Name' , u.phone as 'Phone Number' ,t.description as 'Account Type',u.address as 'Address',u.count as 'Count' from tblUser u, tblType t where u.type = t.type and username='"+username+"'";
             DataSet dsUser = new DataSet();
             try
             {
@@ -65,8 +65,7 @@ namespace Business_Tier.DataAccess
                         UserType = rd.GetInt32(3),
                         UserAddress = rd.GetString(4),
                         UserPhone = rd.GetString(5),
-                        UserCount = rd.GetInt32(6),
-                        UserStatus = rd.GetInt32(7),
+                        UserCount = rd.GetInt32(6)
                     };
                     bookList.Add(p);
                 }
@@ -77,7 +76,7 @@ namespace Business_Tier.DataAccess
         public bool addNewUser(Users b)
         {
 
-            string SQL = "Insert tblUser values(@username,@password,@type,@name,@address,@phone,@count,@status)";
+            string SQL = "Insert tblUser values(@username,@password,@type,@name,@address,@phone,@count)";
             SqlParameter username = new SqlParameter("@username", b.UserName);
             SqlParameter password = new SqlParameter("@password", b.UserPassword);
             SqlParameter type = new SqlParameter("@type", b.UserType);
@@ -85,10 +84,9 @@ namespace Business_Tier.DataAccess
             SqlParameter address = new SqlParameter("@address", b.UserAddress);
             SqlParameter phone = new SqlParameter("@phone", b.UserPhone);
             SqlParameter count = new SqlParameter("@count", b.UserCount);
-            SqlParameter status = new SqlParameter("@status", b.UserStatus);
             try
             {
-                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, username, password, type, name, address, phone, count, status);
+                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, username, password, type, name, address, phone, count);
             }
             catch (SqlException se)
             {
@@ -99,8 +97,7 @@ namespace Business_Tier.DataAccess
         
         public bool updateUser(Users b)
         {
-            //string SQLs = "Update Books set BookTitle=@Title,BookQuantity =@Quantity,BookPrice=@Price where BookID=@ID";
-            string SQL = "Update tblUser set Username=@username,password=@password,type=@type,name=@name,address=@address,phone=@phone,count=@count,status=@status where username=@username";
+            string SQL = "Update tblUser set Username=@username,password=@password,type=@type,name=@name,address=@address,phone=@phone,count=@count where username=@username";
             SqlParameter username = new SqlParameter("@username", b.UserName);
             SqlParameter password = new SqlParameter("@password", b.UserPassword);
             SqlParameter type = new SqlParameter("@type", b.UserType);
@@ -108,10 +105,9 @@ namespace Business_Tier.DataAccess
             SqlParameter address = new SqlParameter("@address", b.UserAddress);
             SqlParameter phone = new SqlParameter("@phone", b.UserPhone);
             SqlParameter count = new SqlParameter("@count", b.UserCount);
-            SqlParameter status = new SqlParameter("@status", b.UserStatus);
             try
             {
-                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, username, password, type, name, address, phone, count, status);
+                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, username, password, type, name, address, phone, count);
             }
             catch (SqlException se)
             {

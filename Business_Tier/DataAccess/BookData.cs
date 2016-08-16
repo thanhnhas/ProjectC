@@ -194,7 +194,7 @@ namespace Business_Tier.DataAccess
         //UPDATE TO DATABASE
         public bool UpdateBookRow(Book b)
         {
-            String SQL = "update tblBook set BookName='" + b.Name + "' , CodeID='" + b.TypeID + "' , publisherID='" + b.PublisherID + "' , AuthorID='" + b.AuthorID + "' where ISBN='" + b.ISBN + "'";
+            String SQL = "update tblBook set BookName=N'" + b.Name + "' , CodeID='" + b.TypeID + "' , publisherID='" + b.PublisherID + "' , AuthorID='" + b.AuthorID + "' where ISBN='" + b.ISBN + "'";
 
             try
             {
@@ -220,7 +220,7 @@ namespace Business_Tier.DataAccess
         }
         public bool UpdateBookTypeRow(BookType bt)
         {
-            String SQL = "update tblCatagory set Type='" + bt.Name + "' where CodeID ='" + bt.ID + "'";
+            String SQL = "update tblCatagory set Type=N'" + bt.Name + "' where CodeID ='" + bt.ID + "'";
 
             try
             {
@@ -233,7 +233,7 @@ namespace Business_Tier.DataAccess
         }
         public bool UpdatePublisherRow(Publisher p)
         {
-            String SQL = "update tblPublisher set PublishName='" + p.Name + "', Address='" + p.Address +"', Phone='" + p.Phone +"' where publisherID='" +p.ID +"'";
+            String SQL = "update tblPublisher set PublishName=N'" + p.Name + "', Address=N'" + p.Address +"', Phone='" + p.Phone +"' where publisherID='" +p.ID +"'";
 
 
             try

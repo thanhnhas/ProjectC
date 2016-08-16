@@ -77,6 +77,12 @@
     <Compile Include="frmRegis.Designer.cs">
       <DependentUpon>frmRegis.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ManageBorrow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegis.resx">
       <DependentUpon>frmRegis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ManageBorrow.resx">
       <DependentUpon>frm_ManageBorrow.cs</DependentUpon>

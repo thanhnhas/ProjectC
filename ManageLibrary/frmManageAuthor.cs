@@ -33,6 +33,22 @@ namespace ManageLibrary
             txtAuthorName.Enabled = flag;
             
         }
+        private  bool Authorisvalid()
+        {
+            if (string.IsNullOrEmpty(txtAuthorID.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã tác giả!", "Lỗi",
+                       MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtAuthorName.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tên tác giả!", "Lỗi",
+                       MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
         private void frmManageAuthor_Load(object sender, EventArgs e)
         {
             dtAuthor = Adt.GetAuthorByDataSet().Tables[0];
@@ -57,33 +73,55 @@ namespace ManageLibrary
             txtAuthorName.Clear();
             
             this.EnableTxT(0);
-            btnAuthorAdd.Enabled = false;
+            btnAuthorDelete.Enabled = false;
             btnAuthorUpdate.Enabled = false;
+            btnAuthorSave.Enabled = true;
             addOrEdit = true;
         }
 
         private void btnAuthorSave_Click(object sender, EventArgs e)
         {
-            bool flag;
-            Au.AuthorID = txtAuthorID.Text;
-            Au.AuthorName = txtAuthorName.Text;
-            
-
-            if (addOrEdit == true)
-                flag = Adt.addNewAuthor(Au);
-            else
-                flag = Adt.updateAuthor(Au);
-
-            if (flag == true)
+            try
             {
-                MessageBox.Show("Save successful.");
-                this.EnableTxT(1);
-                btnAuthorAdd.Enabled = true;
-                btnAuthorUpdate.Enabled = true;
+                if (Authorisvalid() == false)
+                {
+                    return;
+                }
+                bool flag;
+                Au.AuthorID = txtAuthorID.Text;
+                Au.AuthorName = txtAuthorName.Text;
+
+
+                if (addOrEdit == true)
+                    flag = Adt.addNewAuthor(Au);
+                else
+                    flag = Adt.updateAuthor(Au);
+
+                if (flag == true)
+                {
+                    MessageBox.Show("Đã thêm/cập nhật mã tác giả " + txtAuthorID.Text +
+                            " vào dữ liệu!", "Thành công",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.EnableTxT(1);
+                    btnAuthorUpdate.Enabled = true;
+                    btnAuthorAdd.Enabled = true;
+                    btnAuthorSave.Enabled = false;
+                    btnAuthorDelete.Enabled = true;
+                }
+                else
+                    MessageBox.Show("Thêm thất bại do gặp lỗi, thử lại sau", "Thất bại",
+                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.frmManageAuthor_Load(sender, e);
+
             }
-            else
-                MessageBox.Show("Save fail.");
-            this.frmManageAuthor_Load(sender, e);
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Mã tác giả bị trùng, vui lòng thử lại", "Thất bại",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtAuthorID.Focus();
+            }
+            
         }
 
         private void btnAuthorUpdate_Click(object sender, EventArgs e)
@@ -91,26 +129,40 @@ namespace ManageLibrary
             
             txtAuthorName.Clear();
             this.EnableTxT(0);
-            btnAuthorUpdate.Enabled = false;
+            txtAuthorID.Enabled = false;
+            btnAuthorUpdate.Enabled = true;
+            btnAuthorDelete.Enabled = false;
             btnAuthorAdd.Enabled = false;
+            btnAuthorSave.Enabled = true;
             addOrEdit = false;
         }
 
         private void btnAuthorDelete_Click(object sender, EventArgs e)
         {
-            string ID = txtAuthorID.Text;
-            Author b = new Author { AuthorID = ID };
-            if (Adt.deleteAuthor(b))
+            try
             {
-                DataRow row = dtAuthor.Rows.Find(ID);
-                dtAuthor.Rows.Remove(row);
-                MessageBox.Show("Successful.");
+                string ID = txtAuthorID.Text;
+                Author b = new Author { AuthorID = ID };
+                if (Adt.deleteAuthor(b))
+                {
+                    DataRow row = dtAuthor.Rows.Find(ID);
+                    dtAuthor.Rows.Remove(row);
+                    MessageBox.Show("Đã xóa tác giả khỏi dữ liệu", "Thành công",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại do gặp lỗi, thử lại sau", "Thất bại",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Fail.");
+                MessageBox.Show("Tác giả này còn sách trong dữ liệu, không thể xóa!\n Thử lại sau...", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
         }
 
         private void btnAuthorExit_Click(object sender, EventArgs e)

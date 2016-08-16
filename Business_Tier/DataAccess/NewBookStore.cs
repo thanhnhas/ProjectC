@@ -32,5 +32,35 @@ namespace Business_Tier.DataAccess
                 throw new Exception(se.Message);
             }
         }
+        public DataSet GetSuggestTable()
+        {
+            string SQL = "select * from tblSuggest where status='false'";
+            DataSet dts = new DataSet();
+            try
+            {
+                dts = DataProvider.ExecuteQueryWithDataSet(SQL, CommandType.Text);
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+            return dts;
+        }
+
+        public bool AcceptSuggest(String ID)
+        {
+            string SQL = "Update tblSuggest set status='True' where ID=@ID";
+            SqlParameter WID= new SqlParameter("@ID", ID);            
+            try
+            {
+                return DataProvider.ExecuteNonQuery(SQL, CommandType.Text, WID);
+            }
+            catch (SqlException se)
+            {
+                throw new Exception(se.Message);
+            }
+        }
+
     }
 }
