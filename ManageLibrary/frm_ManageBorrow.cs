@@ -305,9 +305,9 @@ namespace ManageLibrary
                     txtDiaChi.DataBindings.Add("Text", ThongTinDocGia, "address");
                     lbrecount.DataBindings.Add("Text", ThongTinDocGia, "recount");
                     btnPhieuMoi.Enabled = true;
+                    txtMaDocGiaPhieu.ReadOnly = true;
                 }
             }
-            txtMaDocGiaPhieu.ReadOnly = true;
             
         }
         //Hiện thực nút fill details bằng thao tác enter
