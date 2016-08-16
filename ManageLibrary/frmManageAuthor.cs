@@ -64,7 +64,6 @@ namespace ManageLibrary
             
 
             dgvAuthorList.DataSource = bsAuthorList;
-            bnAuthorList.BindingSource = bsAuthorList;
         }
 
         private void btnAuthorAdd_Click(object sender, EventArgs e)

@@ -29,7 +29,7 @@ namespace ManageLibrary
         {
             //Load bảng danh sách các cuốn sách có trong thư viện
             BangDanhSachSach = mbd.GetBookListFullByDataSet().Tables[0];
-            dgvKetQuaTimSach.DataSource = BangDanhSachSach;
+            dgvKetQuaTimSach.DataSource = BangDanhSachSach;           
             BindingTextboxMuon();
         }
         void loadDSTra()
@@ -45,6 +45,14 @@ namespace ManageLibrary
 
             loadDSMuon();
             loadDSTra();
+            if (dgvDanhSachMuon.Rows.Count == 0)
+            {
+                btnTraSach.Enabled = false;
+            }
+            else
+            {
+                btnTraSach.Enabled = true;
+            }
             //xóa cột
             xoaCotdgvTra();
             xoaCotdgvMuon();

@@ -321,7 +321,9 @@
             this.Controls.Add(this.btnUserSave);
             this.Controls.Add(this.btnUserAdd);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmManageUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Quản Lý Tài Khoản";
             this.Load += new System.EventHandler(this.frmManageBorrowers_Load);
             this.groupBox2.ResumeLayout(false);
