@@ -16,7 +16,7 @@ namespace Business_Tier.DataAccess
 
         public DataSet getBorrowByDataSet(string username)
         {
-            string SQL = "select d.borrowID as 'Mã HD', bo.BookName,b.username,d.ISBN,b.fromdate,b.todate,b.status from tblBook bo, tblBorrow b, tblDetail d"
+            string SQL = "select d.borrowID as 'Mã HD', bo.BookName,b.username,d.ISBN,b.fromdate,b.todate,b.status from tblBook bo, tblBorrow b, tblDetail d "
                 + " where b.ID = d.borrowID and d.status = 'true' and d.ISBN = bo.ISBN and b.username='"+username+"'";
             DataSet dts = new DataSet();
             try

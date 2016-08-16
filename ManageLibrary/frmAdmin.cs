@@ -29,7 +29,7 @@ namespace ManageLibrary
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            new frmManageUsers().ShowDialog();
+            new frmManageUsers(lbName.Text).ShowDialog();
         }
 
         private void btnAuthor_Click(object sender, EventArgs e)

@@ -72,7 +72,7 @@ namespace Business_Tier.DataAccess
 
         public bool updateAuthor(Author b)
         {
-            //string SQLs = "Update Books set BookTitle=@Title,BookQuantity =@Quantity,BookPrice=@Price where BookID=@ID";
+            
             string SQL = "Update tblAuthor set AuthorID=@AuthorID,AuthorName=@AuthorName where AuthorID=@AuthorID";
             SqlParameter id = new SqlParameter("@AuthorID", b.AuthorID);
             SqlParameter name = new SqlParameter("@AuthorName", b.AuthorName);

@@ -15,6 +15,5 @@ namespace Business_Tier.Entities
         public string UserAddress { get; set; }
         public string UserPhone { get; set; }
         public int UserCount { get; set; }
-        public int UserStatus { get; set; }
     }
 }

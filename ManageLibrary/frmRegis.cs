@@ -127,7 +127,7 @@ namespace ManageLibrary
             // If the no button was pressed ...
             if (result == DialogResult.Yes)
             {
-                this.Close();
+                Application.Restart();              
             }
         }
     }

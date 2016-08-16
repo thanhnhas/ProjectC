@@ -153,7 +153,7 @@ namespace Business_Tier.DataAccess
         public bool insertDtBorrow(String username, DateTime frDate, DateTime toDate)
         {
 
-            string SQL = "insert tblBorrow values (@usernametd , @fromdate , @todate , 1 , null)";
+            string SQL = "insert tblBorrow values (@usernametd , @fromdate , @todate , 1)";
             SqlParameter usernametd = new SqlParameter("@usernametd", username);
             SqlParameter fromdate = new SqlParameter("@fromdate", frDate);
             SqlParameter todate = new SqlParameter("@todate", toDate);

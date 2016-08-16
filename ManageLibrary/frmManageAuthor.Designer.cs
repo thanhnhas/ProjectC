@@ -66,25 +66,29 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvAuthorList);
-            this.groupBox2.Location = new System.Drawing.Point(10, 308);
+            this.groupBox2.Location = new System.Drawing.Point(529, 63);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1026, 192);
+            this.groupBox2.Size = new System.Drawing.Size(480, 159);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Tác Giả";
             // 
             // dgvAuthorList
             // 
+            this.dgvAuthorList.AllowUserToAddRows = false;
+            this.dgvAuthorList.AllowUserToDeleteRows = false;
+            this.dgvAuthorList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAuthorList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAuthorList.Location = new System.Drawing.Point(6, 21);
             this.dgvAuthorList.Name = "dgvAuthorList";
             this.dgvAuthorList.RowTemplate.Height = 24;
-            this.dgvAuthorList.Size = new System.Drawing.Size(1014, 171);
+            this.dgvAuthorList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAuthorList.Size = new System.Drawing.Size(455, 132);
             this.dgvAuthorList.TabIndex = 0;
             // 
             // btnAuthorExit
             // 
-            this.btnAuthorExit.Location = new System.Drawing.Point(812, 208);
+            this.btnAuthorExit.Location = new System.Drawing.Point(804, 268);
             this.btnAuthorExit.Name = "btnAuthorExit";
             this.btnAuthorExit.Size = new System.Drawing.Size(117, 50);
             this.btnAuthorExit.TabIndex = 19;
@@ -94,7 +98,7 @@
             // 
             // btnAuthorDelete
             // 
-            this.btnAuthorDelete.Location = new System.Drawing.Point(635, 208);
+            this.btnAuthorDelete.Location = new System.Drawing.Point(627, 268);
             this.btnAuthorDelete.Name = "btnAuthorDelete";
             this.btnAuthorDelete.Size = new System.Drawing.Size(117, 50);
             this.btnAuthorDelete.TabIndex = 18;
@@ -104,7 +108,7 @@
             // 
             // btnAuthorUpdate
             // 
-            this.btnAuthorUpdate.Location = new System.Drawing.Point(457, 208);
+            this.btnAuthorUpdate.Location = new System.Drawing.Point(449, 268);
             this.btnAuthorUpdate.Name = "btnAuthorUpdate";
             this.btnAuthorUpdate.Size = new System.Drawing.Size(117, 50);
             this.btnAuthorUpdate.TabIndex = 17;
@@ -114,7 +118,8 @@
             // 
             // btnAuthorSave
             // 
-            this.btnAuthorSave.Location = new System.Drawing.Point(290, 208);
+            this.btnAuthorSave.Enabled = false;
+            this.btnAuthorSave.Location = new System.Drawing.Point(282, 268);
             this.btnAuthorSave.Name = "btnAuthorSave";
             this.btnAuthorSave.Size = new System.Drawing.Size(117, 50);
             this.btnAuthorSave.TabIndex = 16;
@@ -124,7 +129,7 @@
             // 
             // btnAuthorAdd
             // 
-            this.btnAuthorAdd.Location = new System.Drawing.Point(116, 208);
+            this.btnAuthorAdd.Location = new System.Drawing.Point(108, 268);
             this.btnAuthorAdd.Name = "btnAuthorAdd";
             this.btnAuthorAdd.Size = new System.Drawing.Size(117, 50);
             this.btnAuthorAdd.TabIndex = 15;
@@ -138,9 +143,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtAuthorID);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(10, 12);
+            this.groupBox1.Location = new System.Drawing.Point(25, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1020, 160);
+            this.groupBox1.Size = new System.Drawing.Size(456, 159);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi Tiết Tác Giả";
@@ -204,7 +209,7 @@
             this.bnAuthorList.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bnAuthorList.Name = "bnAuthorList";
             this.bnAuthorList.PositionItem = this.bindingNavigatorPositionItem;
-            this.bnAuthorList.Size = new System.Drawing.Size(1042, 27);
+            this.bnAuthorList.Size = new System.Drawing.Size(1021, 27);
             this.bnAuthorList.TabIndex = 21;
             this.bnAuthorList.Text = "bindingNavigator1";
             // 
@@ -297,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 540);
+            this.ClientSize = new System.Drawing.Size(1021, 357);
             this.Controls.Add(this.bnAuthorList);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnAuthorExit);
