@@ -404,6 +404,14 @@ namespace ManageLibrary
 
         }
 
+        private void txtMaDocGia_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMaDocGia.Text == "")
+            {
+                frm_ManageBorrow_Load(null, null);
+            }
+        }
+
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
             String MaSach = txtMaSachMuon.Text;

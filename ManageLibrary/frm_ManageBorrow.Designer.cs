@@ -413,6 +413,7 @@
             this.txtMaDocGia.Name = "txtMaDocGia";
             this.txtMaDocGia.Size = new System.Drawing.Size(180, 22);
             this.txtMaDocGia.TabIndex = 0;
+            this.txtMaDocGia.TextChanged += new System.EventHandler(this.txtMaDocGia_TextChanged);
             this.txtMaDocGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaDocGia_KeyPress);
             // 
             // label1
